@@ -1,0 +1,450 @@
+﻿html {
+    height: 100%;   
+    overflow: -moz-scrollbars-vertical; 
+    overflow-y: scroll;
+}
+
+body {
+    height: 100%;
+}
+
+body, html, p, ul, ol {
+    border:  none;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background: url("images/bg.jpg") no-repeat scroll center top white;
+    color: #666666;
+    font-family: Verdana,Arial,Helvetica,Sans-serif;
+    font-size: 80%;
+    line-height: 1.5;
+    text-align: center;    
+}
+
+a 
+{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+a:link
+{
+    color: #8697A0;
+    text-decoration: none;
+}
+a:visited
+{
+    color: #8697A0;
+    text-decoration: none;    
+}
+a:hover
+{
+    color: gray;
+    text-decoration: underline;
+}
+a:active
+{
+    color: gray;
+    text-decoration: underline;    
+}
+
+p, ul
+{
+    margin-bottom: 20px;
+    line-height: 1.6em;
+}
+
+/* HEADINGS   
+----------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6
+{
+    margin: 0 0 4px 0;
+    color: #5A5A5A;
+    font-family: Georgia,Helvetica,Sans-serif;
+    font-weight: normal;
+}
+
+h1
+{
+    font-size: 2.5em;
+}
+
+h2
+{
+    font-size: 1.7em;
+}
+
+h3
+{
+    font-size: 1.4em;
+}
+
+h4
+{
+    font-size: 1.2em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{
+    margin: 0 auto;
+    position: relative;
+    text-align: left;
+    width: 830px;
+}
+
+#header
+{
+    height: 169px;
+    width: 830px;
+    /* background: url("images/logo.png") no-repeat scroll right 45px; */
+}
+
+#main
+{
+    background: url("images/mainbg.jpg") no-repeat scroll left top #F4F5DE;
+    clear: both;
+    float: left;
+    margin-top: -1px;
+    width: 770px;
+    padding: 30px;
+}
+
+.message
+{
+    white-space: pre-wrap;
+}
+
+
+/* FORM LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset 
+{
+    margin: 0;
+    padding: 1em;
+    border: none;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset ul li 
+{
+    list-style: none outside none;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input[type="text"] 
+{
+    width: 200px;
+    border: 1px solid #CCC;
+}
+
+input[type="password"] 
+{
+    width: 200px;
+    border: 1px solid #CCC;
+}
+
+/* TABLE
+----------------------------------------------------------*/
+
+table 
+{
+  border: solid 1px #e8eef4;
+  border-collapse: collapse;
+}
+
+table td 
+{
+  padding: 10px;   
+  border: solid 1px #e8eef4;
+}
+
+table th
+{
+  padding: 10px;
+  text-align: left;
+  background-color: #e8eef4; 
+  border: solid 1px white;   
+}
+
+/* MISC  
+----------------------------------------------------------*/
+.clear
+{
+    clear: both;
+}
+
+.error
+{
+    color:Red;
+}
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+
+
+/* Styles for index view
+----------------------------------------------------------*/
+
+.deleteLink 
+{
+    font-size: 1.2em;
+    display: block;
+    width: 10px;
+    float: right;
+    margin-right: -8px;
+    margin-top: -15px;
+    text-decoration: none;
+}
+
+/* Styles for editor and display helpers
+----------------------------------------------------------*/
+.display-label,
+.display-field
+{
+    margin: 0.5em 0;
+}
+
+.text-box
+{
+    width: 30em;
+}
+
+.text-box.multi-line
+{
+    height: 6.5em;
+}
+
+.tri-state
+{
+    width: 6em;
+}
+
+
+/* new */
+
+.rowLeft 
+{
+    float: left;
+    width: 100px;
+}
+
+.rowRight
+{
+    float: left;
+    width: 300px;
+}
+
+textarea 
+{
+   width: 100%;
+   height: 100px;   
+}
+
+.clear 
+{
+  clear: both;
+  display: block;
+  border: none;
+  border-bottom: 1px solid silver;   
+}
+
+.display-field ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* drop shadow
+----------------------------------------------------------*/
+/* shadow effect that uses the Sliding doors technique */
+
+.drop_shadow
+{
+    background: url(images/drop_shadow/top_left.png) top left no-repeat;
+    padding: 0 !important;
+}
+
+.drop_shadow2
+{
+    background: url(images/drop_shadow/bottom_left.png) bottom left no-repeat;
+}
+
+.drop_shadow3
+{
+    background: url(images/drop_shadow/top_right.png) top right no-repeat;
+}
+
+.drop_shadow4
+{
+    background: url(images/drop_shadow/bottom_right.png) bottom right no-repeat;
+    padding-bottom: 15px;
+}
+
+.drop_shadow5 
+{
+    background: #f8f8f8 none;
+    padding: 10px;
+    margin: 0 15px 0 15px;
+}
+
+
+.postit,
+.bigpostit
+{
+    width: 360px;
+    margin: 30px 0 0 20px;
+    float: left;  
+    font: 14px "Lucida Grande", "Lucida Sans Unicode" ,Arial,Verdana,sans-serif;
+}
+
+.bigpostit 
+{
+    width: 600px;
+    float: none;
+    margin: 30px auto;
+}
+
+.postit .drop_shadow5,
+.bigpostit .drop_shadow5
+{
+  background: #F0F0A6 none;
+  min-height: 80px;
+}
+
+.postit.redColor .drop_shadow5,
+.bigpostit.redColor .drop_shadow5
+{
+  background: #EFA4B2 none;
+}
+
+.postit.greenColor .drop_shadow5,
+.bigpostit.greenColor .drop_shadow5
+{
+  background: #BBDFB5 none;
+}
+
+.postit.grayColor .drop_shadow5,
+.bigpostit.grayColor .drop_shadow5
+{
+  background: #DFDFDF none;
+}
+
+
+
+
+
+
+.rotate_it
+{
+
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=-2); /* IE */
+  -moz-transform: rotate(-5deg);  /* Mozilla Firefox */
+  -webkit-transform: rotate(-5deg); /* Google Chrome and Safari */
+  -o-transform: rotate(-5deg); /* old Opera */
+  transform: rotate(-5deg); /* CSS3, new Opera */
+}
+
+.rotate_it_right 
+{
+
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2); /* IE */
+  -moz-transform: rotate(5deg);  /* Mozilla Firefox */
+  -webkit-transform: rotate(5deg); /* Google Chrome and Safari */
+  -o-transform: rotate(5deg); /* old Opera */
+  transform: rotate(5deg); /* CSS3, new Opera */
+   
+}
+
+
+.sexy_date
+{
+    background-color: #E0E2BB;
+
+    float:right;
+    margin: 2px;
+    margin-left:10px;
+    padding:45px 5px 0;
+    position:relative;
+}
+
+.sexy_date .day
+{
+  font-size: 40px;
+  left:3px;
+  line-height:39px;
+  position:absolute;
+  top: 0;
+}
+
+.sexy_date .month
+{
+    font-size:25px;
+    text-transform:uppercase;
+    padding-right: 20px;
+    line-height:20px;
+}
+.sexy_date .year 
+{
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+
+
+    display: block;
+    font-size: 1em;
+    background-color: #E0E2BB;
+    position: absolute;
+    right: 0;
+    top: 15px;
+}

@@ -1,0 +1,6 @@
+DeveloperMediaDemo/**/obj
+DeveloperMediaDemo/**/bin
+packages/
+*.user
+*.suo
+_Resharper*
