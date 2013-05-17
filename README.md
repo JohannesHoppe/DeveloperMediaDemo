@@ -1,4 +1,1 @@
-DeveloperMediaDemo
-==================
-
-DeveloperMediaDemo
+![Screenshot](https://raw.github.com/JohannesHoppe/DeveloperMediaDemo/master/screenshot.png)
