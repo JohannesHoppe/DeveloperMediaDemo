@@ -2,7 +2,7 @@
 using System.IO;
 using System.Web.Optimization;
 
-namespace WebNoteSinglePage.AppStart
+namespace DeveloperMediaDemo.AppStart
 {
     /// <summary>
     /// Will ensure bundles are included in the order you register them

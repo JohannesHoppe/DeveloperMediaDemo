@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace WebNoteSinglePage.AppStart
+namespace DeveloperMediaDemo.AppStart
 {
     public static class FilterConfig
     {

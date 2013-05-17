@@ -10,15 +10,12 @@
         'knockout.mapping': 'knockout.mapping-latest',
         'cufon': 'cufon-yui',
         'buxtonSketch': 'fonts/Buxton_Sketch_400.font',
-        'sammy': 'sammy-0.7.4',
         'datejs': 'date'
     },
     shim: {
-        'amplify': { deps: ['jquery'], exports: 'amplify' },
         'knockout': { deps: ['jquery', 'json2'] },
         'cufon': { exports: 'Cufon' },
         'buxtonSketch': { deps: ['cufon'], exports: 'Cufon' },
-        'sammy': { deps: ['jquery'] },
         'datejs': { exports: 'Date.CultureInfo' },
         'json2': { exports: 'JSON.stringify' }
     }

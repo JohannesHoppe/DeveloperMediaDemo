@@ -2,12 +2,12 @@
 using System.Web;
 using System.Web.Optimization;
 
-namespace WebNoteSinglePage.AppStart
+namespace DeveloperMediaDemo.AppStart
 {
     public static class BundleConfig
     {
-        public const string StylesLess        = "~/bundles/styles/less";
-        public const string ScriptsGlobal     = "~/bundles/scripts/global";
+        public const string StylesLess    = "~/bundles/styles/less";
+        public const string ScriptsGlobal = "~/bundles/scripts/global";
 
         public static void RegisterLessBundles(BundleCollection bundles)
         {

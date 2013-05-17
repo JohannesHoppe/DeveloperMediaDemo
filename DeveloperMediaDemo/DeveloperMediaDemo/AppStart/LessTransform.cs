@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Web.Optimization;
 using dotless.Core.configuration;
 
-namespace WebNoteSinglePage.AppStart
+namespace DeveloperMediaDemo.AppStart
 {
     public class LessTransform : IBundleTransform
     {

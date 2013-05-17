@@ -23,8 +23,8 @@
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WebNoteSinglePage</RootNamespace>
-    <AssemblyName>WebNoteSinglePage</AssemblyName>
+    <RootNamespace>DeveloperMediaDemo</RootNamespace>
+    <AssemblyName>DeveloperMediaDemo</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>false</UseIISExpress>
@@ -53,6 +53,10 @@
   <ItemGroup>
     <Reference Include="Antlr3.Runtime, Version=3.3.1.7705, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="dotless.Core, Version=1.3.1.0, Culture=neutral, PublicKeyToken=96b446c9e63eae34, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\dotless.1.3.1.0\lib\dotless.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -129,59 +133,44 @@
     <Compile Include="AppStart\LessTransform.cs">
       <DependentUpon>BundleConfig.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppStart\MongoDbConfig.cs" />
     <Compile Include="AppStart\RouteConfig.cs" />
-    <Compile Include="AppStart\UnityConfig.cs" />
-    <Compile Include="AppStart\UnityContainerConfig.cs">
-      <DependentUpon>UnityConfig.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AppStart\UnityDependencyResolver.cs">
-      <DependentUpon>UnityConfig.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JasmineController.cs" />
-    <Compile Include="Controllers\NoteWithRawCategories.cs">
-      <DependentUpon>NotesController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\NotesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\INoteRepository.cs" />
-    <Compile Include="Models\MongoDbNoteRepository.cs" />
-    <Compile Include="Models\Note.cs" />
-    <Compile Include="Models\NoteWithCategories.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Content\jasmine\jasmine.css" />
     <Content Include="Content\jasmine\jasmine_favicon.png" />
     <Content Include="Scripts\date.js" />
+    <Content Include="Scripts\IndexViewModel.js" />
     <Content Include="Scripts\jasmine\jasmine-html.js" />
     <Content Include="Scripts\jasmine\jasmine.js" />
     <Content Include="Scripts\jasmine\MIT.LICENSE" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js">
       <DependentUpon>jquery-1.9.1.js</DependentUpon>
     </None>
-    <Content Include="Scripts\jasmine-samples\Player.js" />
-    <Content Include="Scripts\jasmine-samples\PlayerSpec.js" />
-    <Content Include="Scripts\jasmine-samples\Song.js" />
-    <Content Include="Scripts\jasmine-samples\SpecHelper.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js">
       <DependentUpon>jquery-1.9.1.js</DependentUpon>
     </Content>
-    <Content Include="Scripts\jquery.serializeObject.js" />
+    <Content Include="Scripts\jquery.serializeObject.js">
+      <DependentUpon>jquery-1.9.1.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\json2.js" />
     <Content Include="Scripts\knockout-2.2.1.debug.js">
       <DependentUpon>knockout-2.2.1.js</DependentUpon>
     </Content>
     <Content Include="Scripts\knockout-2.2.1.js" />
-    <Content Include="Scripts\knockout.bindings.js" />
+    <Content Include="Scripts\knockout.bindings.js">
+      <DependentUpon>knockout-2.2.1.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\knockout.mapping-latest.debug.js">
       <DependentUpon>knockout.mapping-latest.js</DependentUpon>
     </Content>
-    <Content Include="Scripts\knockout.mapping-latest.js" />
+    <Content Include="Scripts\knockout.mapping-latest.js">
+      <DependentUpon>knockout-2.2.1.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\r.js">
       <DependentUpon>require.js</DependentUpon>
     </Content>
@@ -189,10 +178,6 @@
       <DependentUpon>require.js</DependentUpon>
     </Content>
     <Content Include="Scripts\require.js" />
-    <Content Include="Scripts\singlePage\ViewModels\Page404ViewModel.js" />
-    <Content Include="Scripts\singlePage\ViewModels\CreateViewModel.js" />
-    <Content Include="Scripts\singlePage\bindRefreshView.js" />
-    <Content Include="Scripts\singlePage\bindLoadingIndicator.js" />
     <Content Include="Scripts\jquery-1.9.1.min.map">
       <DependentUpon>jquery-1.9.1.js</DependentUpon>
     </Content>
@@ -212,11 +197,9 @@
     <Content Include="Scripts\fonts\Buxton_Sketch_400.font.js" />
     <Content Include="Scripts\fonts\Segoe_Marker_400.font.js" />
     <Content Include="Scripts\fonts\SketchFlow_Print_400.font.js" />
-    <Content Include="Scripts\jquery.loadingIndicator.js" />
-    <Content Include="Scripts\singlePage\app.js" />
-    <Content Include="Scripts\singlePage\appState.js" />
-    <Content Include="Scripts\singlePage\ViewModels\DetailsViewModel.js" />
-    <Content Include="Scripts\singlePage\ViewModels\IndexViewModel.js" />
+    <Content Include="Scripts\jquery.loadingIndicator.js">
+      <DependentUpon>jquery-1.9.1.js</DependentUpon>
+    </Content>
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -243,7 +226,9 @@
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

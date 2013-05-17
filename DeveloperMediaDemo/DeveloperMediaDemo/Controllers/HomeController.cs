@@ -1,10 +1,9 @@
 ﻿using System.Web.Mvc;
 
-namespace WebNoteSinglePage.Controllers
+namespace DeveloperMediaDemo.Controllers
 {
     public partial class HomeController : Controller
     {
-        // one view - it's a singe page application
         public virtual ActionResult Index()
         {
             return View();

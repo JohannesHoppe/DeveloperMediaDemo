@@ -2,7 +2,7 @@
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace WebNoteSinglePage.AppStart
+namespace DeveloperMediaDemo.AppStart
 {
     public static class RouteConfig
     {
