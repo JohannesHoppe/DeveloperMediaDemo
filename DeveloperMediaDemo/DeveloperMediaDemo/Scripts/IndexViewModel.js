@@ -8,7 +8,8 @@
         self.header = ko.observable("Example");
         self.notes = ko.observableArray(
             [{  Title: "Ein PostIt", Message: "Hello World" },
-             {  Title: "Zweites Beispiel", Message: "Alles mit Bindings" }]);
+             { Title: "Zweites Beispiel", Message: "Alles mit Bindings" },
+             { Title: "Drittes Beispiel", Message: "Geladen über WebApi" }]);
 
 
 
