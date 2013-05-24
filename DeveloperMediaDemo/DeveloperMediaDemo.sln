@@ -12,6 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{456684
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{43F98921-E23D-43FE-980B-6319B76026EB}"
 	ProjectSection(SolutionItems) = preProject
+		..\01. Knockout Webinar.md = ..\01. Knockout Webinar.md
 		JSLintOptions.xml = JSLintOptions.xml
 	EndProjectSection
 EndProject

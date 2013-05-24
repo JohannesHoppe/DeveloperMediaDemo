@@ -1,45 +1,26 @@
-﻿<div id="index_template">
-
-    <h1 data-bind="text: header"></h1>  
-
-    <div data-bind="foreach: notes">
-        
-        <div class="drop_shadow postit" data-bindXXX="choseCategoryColor: Categories">
-            <div class="drop_shadow2"><div class="drop_shadow3"><div class="drop_shadow4"><div class="drop_shadow5">  
-                
-            @*
-            <a class="deleteLink" data-bind="click: $root.deleteNote">x</a>
-        
-            <div class="sexy_date">
-                <h1 class="day" data-bind="dateText: Added, datePattern: 'dd'"></h1> 
-                <h1 class="month" data-bind="dateText: Added, datePattern: 'MMM'"></h1> 
-                <h1 class="year" data-bind="dateText: Added, datePattern: 'yyyy'"></h1>
-            </div> 
-            *@
-        
-            <h2 data-bind="text: Title"></h2>
-            <p data-bind="text: Message" class="message"></p>
-            
-            @*
-            <a data-bind="changeStateOnClick: { viewId: 'details', param: Id() } ">Details</a>  
-            *@
-           
-            </div></div></div></div>    
-
-        </div> 
-
-    </div>    
-
-</div>     
-
-@section scripts  {
-    require(['knockout', 'IndexViewModel', 'cufon', 'buxtonSketch'], function(ko, IndexViewModel, cufon) {
+﻿@section scripts  {
+    require(['knockout', 'jquery', 'IndexViewModel', 'cufon', 'buxtonSketch', 'jquery.dropShadows'], function(ko, $, IndexViewModel, cufon) {
               
         var model = new IndexViewModel();
         ko.applyBindings(model, $('#index_template').get(0));
         //model.loadData();
     
         cufon.replace('h1, h2', { fontFamily: 'Buxton Sketch' });
-        
+        $.dropShadows();
     });
 }
+
+<div id="index_template">
+
+    <h1 data-bind="text: header"></h1>  
+
+    <div data-bind="foreach: notes">
+        
+        <div class="drop_shadow postit" data-bind="choseCategoryColor: Categories">
+        
+            <h2 data-bind="text: Title"></h2>
+            <p data-bind="text: Message" class="message"></p>
+
+        </div> 
+    </div>    
+</div>     

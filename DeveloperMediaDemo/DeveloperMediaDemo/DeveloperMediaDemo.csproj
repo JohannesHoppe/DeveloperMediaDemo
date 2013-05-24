@@ -143,21 +143,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Content\jasmine\jasmine.css" />
     <Content Include="Content\jasmine\jasmine_favicon.png" />
+    <Content Include="Scripts\jquery.dropShadows.js" />
     <Content Include="Scripts\date.js" />
     <Content Include="Scripts\IndexViewModel.js" />
     <Content Include="Scripts\jasmine\jasmine-html.js" />
     <Content Include="Scripts\jasmine\jasmine.js" />
     <Content Include="Scripts\jasmine\MIT.LICENSE" />
-    <None Include="Scripts\jquery-1.9.1.intellisense.js">
-      <DependentUpon>jquery-1.9.1.js</DependentUpon>
-    </None>
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.js">
-      <DependentUpon>jquery-1.9.1.js</DependentUpon>
-    </Content>
-    <Content Include="Scripts\jquery.serializeObject.js">
-      <DependentUpon>jquery-1.9.1.js</DependentUpon>
-    </Content>
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery.loadingIndicator.js" />
     <Content Include="Scripts\json2.js" />
     <Content Include="Scripts\knockout-2.2.1.debug.js">
       <DependentUpon>knockout-2.2.1.js</DependentUpon>
@@ -179,10 +174,8 @@
       <DependentUpon>require.js</DependentUpon>
     </Content>
     <Content Include="Scripts\require.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.map">
-      <DependentUpon>jquery-1.9.1.js</DependentUpon>
-    </Content>
     <Content Include="Views\Jasmine\SpecRunner.cshtml" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\images\ajax-loader.gif" />
@@ -198,9 +191,6 @@
     <Content Include="Scripts\fonts\Buxton_Sketch_400.font.js" />
     <Content Include="Scripts\fonts\Segoe_Marker_400.font.js" />
     <Content Include="Scripts\fonts\SketchFlow_Print_400.font.js" />
-    <Content Include="Scripts\jquery.loadingIndicator.js">
-      <DependentUpon>jquery-1.9.1.js</DependentUpon>
-    </Content>
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
