@@ -1,4 +1,10 @@
 ﻿@section scripts  {
+    
+    require(['indexPage'], function(i) { 
+        i.init(); 
+    });
+    
+
     require(['knockout', 'jquery', 'IndexViewModel', 'cufon', 'buxtonSketch', 'jquery.dropShadows'], function(ko, $, IndexViewModel, cufon) {
               
         var model = new IndexViewModel();
