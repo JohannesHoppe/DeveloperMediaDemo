@@ -1,18 +1,6 @@
 ﻿@section scripts  {
-    
     require(['indexPage'], function(i) { 
         i.init(); 
-    });
-    
-
-    require(['knockout', 'jquery', 'IndexViewModel', 'cufon', 'buxtonSketch', 'jquery.dropShadows'], function(ko, $, IndexViewModel, cufon) {
-              
-        var model = new IndexViewModel();
-        ko.applyBindings(model, $('#index_template').get(0));
-        //model.loadData();
-    
-        cufon.replace('h1, h2', { fontFamily: 'Buxton Sketch' });
-        $.dropShadows();
     });
 }
 
@@ -22,7 +10,7 @@
 
     <div data-bind="foreach: notes">
         
-        <div class="drop_shadow postit" data-bind="choseCategoryColor: Categories">
+        <div class="drop_shadow postit" data-bindXXX="choseCategoryColor: Categories">
         
             <h2 data-bind="text: Title"></h2>
             <p data-bind="text: Message" class="message"></p>

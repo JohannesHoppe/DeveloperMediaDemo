@@ -10,7 +10,9 @@
         'knockout.mapping': 'knockout.mapping-latest',
         'cufon': 'cufon-yui',
         'buxtonSketch': 'fonts/Buxton_Sketch_400.font',
-        'datejs': 'date'
+        'datejs': 'date',
+        'indexPage': 'app/indexPage',
+        'IndexPageViewModel': 'app/IndexPageViewModel'
     },
     shim: {
         'knockout': { deps: ['jquery', 'json2'] },
