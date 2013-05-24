@@ -134,6 +134,7 @@
       <DependentUpon>BundleConfig.cs</DependentUpon>
     </Compile>
     <Compile Include="AppStart\RouteConfig.cs" />
+    <Compile Include="AppStart\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JasmineController.cs" />
     <Compile Include="Global.asax.cs">

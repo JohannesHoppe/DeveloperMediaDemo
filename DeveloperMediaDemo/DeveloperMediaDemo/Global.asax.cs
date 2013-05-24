@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Web.Http;
+using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using DeveloperMediaDemo.AppStart;
@@ -13,9 +14,21 @@ namespace DeveloperMediaDemo
 
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            WebApiConfig.Register(GlobalConfiguration.Configuration);
 
             BundleConfig.RegisterLessBundles(BundleTable.Bundles);
             BundleConfig.RegisterScriptBundles(BundleTable.Bundles);
+
+            DisableXmlFormatter();
+        }
+
+        /// <summary>
+        /// Disables the Xml Formatter in ASP.NET Web API for easier debugging
+        /// </summary>
+        private static void DisableXmlFormatter()
+        {
+            var formatters = GlobalConfiguration.Configuration.Formatters;
+            formatters.Remove(formatters.XmlFormatter);
         }
     }
 }
