@@ -1,17 +1,14 @@
 ﻿define(['jquery', 'knockout', 'knockout.mapping'], function ($, ko, mapping) {
 
-    var AdminCatalogueViewModel = function () {
+    var IndexPageViewModel = function () {
 
         var self = this;
-
 
         self.header = ko.observable("Example");
         self.notes = ko.observableArray(
             [{  Title: "Ein PostIt", Message: "Hello World" },
              { Title: "Zweites Beispiel", Message: "Alles mit Bindings" },
              { Title: "Drittes Beispiel", Message: "Geladen über WebApi" }]);
-
-
 
         self.loadData = function () {
 
@@ -21,5 +18,5 @@
         };
     };
 
-    return AdminCatalogueViewModel;
+    return IndexPageViewModel;
 });
