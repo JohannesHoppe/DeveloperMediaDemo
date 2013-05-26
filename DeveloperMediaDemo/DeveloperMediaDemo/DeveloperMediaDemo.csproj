@@ -136,7 +136,6 @@
     <Compile Include="AppStart\RouteConfig.cs" />
     <Compile Include="AppStart\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\JasmineController.cs" />
     <Compile Include="Controllers\NoteController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -145,17 +144,12 @@
     <Compile Include="Models\Note.cs" />
     <Compile Include="Models\PagedList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="Content\jasmine\jasmine.css" />
-    <Content Include="Content\jasmine\jasmine_favicon.png" />
     <Content Include="Scripts\app\indexPage.js" />
     <Content Include="Scripts\jquery.cufon.js">
       <DependentUpon>jquery-1.9.1.js</DependentUpon>
     </Content>
     <Content Include="Scripts\date.js" />
     <Content Include="Scripts\app\IndexPageViewModel.js" />
-    <Content Include="Scripts\jasmine\jasmine-html.js" />
-    <Content Include="Scripts\jasmine\jasmine.js" />
-    <Content Include="Scripts\jasmine\MIT.LICENSE" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js">
       <DependentUpon>jquery-1.9.1.js</DependentUpon>
     </None>
@@ -167,6 +161,9 @@
       <DependentUpon>jquery-1.9.1.js</DependentUpon>
     </Content>
     <Content Include="Scripts\jquery.loadingIndicator.js">
+      <DependentUpon>jquery-1.9.1.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.plugins.js">
       <DependentUpon>jquery-1.9.1.js</DependentUpon>
     </Content>
     <Content Include="Scripts\json2.js" />
@@ -190,10 +187,10 @@
       <DependentUpon>require.js</DependentUpon>
     </Content>
     <Content Include="Scripts\require.js" />
-    <Content Include="Views\Jasmine\SpecRunner.cshtml" />
     <Content Include="Scripts\jquery-1.9.1.min.map">
       <DependentUpon>jquery-1.9.1.js</DependentUpon>
     </Content>
+    <Content Include="Views\Home\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\images\ajax-loader.gif" />

@@ -1,0 +1,48 @@
+﻿@section scripts  {
+    
+    var id = @ViewBag.Id;
+
+    require(['editPage'], function(i) { 
+        i.init(id); 
+    });
+}
+
+<div id="edit_template">
+
+    <h1 data-bind="text: 'Details of ' + Id()"></h1>
+    
+    <div class="drop_shadow bigpostit greenColor">
+
+        <fieldset>
+        
+            <div class="display-label rowLeft">Title:</div>
+            <div class="display-field rowRight" data-bind="text: Title"></div>
+
+            <hr class="clear" />
+        
+            <div class="display-label rowLeft">Message:</div>
+            <div class="display-field rowRight message" data-bind="text: Message"></div>
+        
+            <hr class="clear" />
+
+            <!--
+            <div class="display-label rowLeft">Categories:</div>
+            <div class="display-field rowRight">
+                <ul data-bind="template: { name: 'categories_list', foreach: Categories }"></ul>
+            </div>
+            -->
+
+        </fieldset>
+    </div>
+    
+    <p>
+        <a href="/">&#171; Back to List</a>
+    </p>
+
+</div>
+
+<script type="text/html" id="categories_list">
+
+    <li data-bind="style: { color: Color() }, text: Name"></li>
+
+</script>

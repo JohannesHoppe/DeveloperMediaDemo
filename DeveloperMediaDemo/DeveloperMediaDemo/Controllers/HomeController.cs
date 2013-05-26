@@ -2,10 +2,16 @@
 
 namespace DeveloperMediaDemo.Controllers
 {
-    public partial class HomeController : Controller
+    public class HomeController : Controller
     {
         public virtual ActionResult Index()
         {
+            return View();
+        }
+
+        public virtual ActionResult Edit(int id)
+        {
+            ViewBag.Id = id;
             return View();
         }
     }
