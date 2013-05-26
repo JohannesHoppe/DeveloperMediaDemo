@@ -16,6 +16,10 @@
                 $.refreshPage();
             });
         };
+
+        self.goToDetails = function() {
+            document.location.href = "/Home/Edit/" + this.Id();
+        };
     };
 
     return IndexPageViewModel;
