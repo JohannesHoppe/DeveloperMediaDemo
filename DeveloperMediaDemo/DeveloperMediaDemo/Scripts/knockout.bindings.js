@@ -38,7 +38,6 @@ function ($, ko) {
     
     // uses Date.js
     // expects a string in ISO 8601 format
-    /*
     ko.bindingHandlers.dateText = {
         update: function (element, valueAccessor, allBindingsAccessor) {
 
@@ -52,7 +51,6 @@ function ($, ko) {
             $(element).text(formatedByDatejs);
         }
     };
-    */
 });
 
     
