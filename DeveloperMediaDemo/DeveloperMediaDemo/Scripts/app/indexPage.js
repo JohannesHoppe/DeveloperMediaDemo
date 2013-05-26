@@ -1,4 +1,4 @@
-﻿define(['knockout', 'jquery', 'IndexPageViewModel', 'jquery.cufon', 'jquery.dropShadows'], function (ko, $, IndexPageViewModel) {
+﻿define(['knockout', 'jquery', 'IndexPageViewModel', 'knockout.bindings', 'jquery.plugins'], function (ko, $, IndexPageViewModel) {
 
     var init = function() {
 
@@ -6,8 +6,8 @@
         ko.applyBindings(model, $('#index_template').get(0));
         model.loadData();
         
-        $.dropShadows();
-        $.cufon();
+        // later we will find a better position!
+        $.refreshPage();
     };
 
     return {

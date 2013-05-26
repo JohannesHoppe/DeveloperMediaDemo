@@ -1,21 +1,44 @@
-﻿define(['jquery',
-        'knockout',
-        'singlePage/appState',
-        'datejs'],
-function ($, ko, appState) {
+﻿define(['jquery', 'knockout', 'datejs'],
+function ($, ko) {
 
-    ko.bindingHandlers.changeStateOnClick = {
-        init: function (element, valueAccessor) {
+    var colorMapping = [
+        { category: 'important', color: "red" },
+        { category: 'hobby', color: "green" },
+        { category: 'private', color: "gray" }];
+    
+    ko.bindingHandlers.choseCategoryColor = {
+        update: function (element, valueAccessor) {
 
-            var value = ko.utils.unwrapObservable(valueAccessor());
-            $(element).click(function () {
-                appState.changeState(value.viewId, value.param);
+            var categories = ko.utils.unwrapObservable(valueAccessor());
+
+            var chosenColor;
+            $.each(colorMapping, function (index, mapping) {
+                if ($.inArray(mapping.category, categories) !== -1) {
+                    chosenColor = mapping.color;
+                    return false;
+                }
             });
+
+            if (chosenColor) {
+                $(element).addClass(chosenColor + "Color");
+            }
         }
     };
+    
+    /*
+    ko.bindingHandlers.changeLocationOnClick = {
+        init: function (element, valueAccessor) {
 
+            var url = ko.utils.unwrapObservable(valueAccessor());
+            $(element).click(function () {
+                document.location.href = url;
+            });
+        }
+    };*/
+    
     // uses Date.js
     // expects a string in ISO 8601 format
+    /*
     ko.bindingHandlers.dateText = {
         update: function (element, valueAccessor, allBindingsAccessor) {
 
@@ -29,31 +52,7 @@ function ($, ko, appState) {
             $(element).text(formatedByDatejs);
         }
     };
-
-    var colorPreference = ["red", "green", "gray"];
-    ko.bindingHandlers.choseCategoryColor = {
-        update: function (element, valueAccessor) {
-
-            var categories = ko.utils.unwrapObservable(valueAccessor());
-
-            var allAvaliableColors = [];
-            $.each(categories, function (index, colorName) {
-                allAvaliableColors.push(colorName.Color());
-            });
-
-            var chosenColor;
-            $.each(colorPreference, function (index, colorName) {
-                if ($.inArray(colorName, allAvaliableColors) !== -1) {
-                    chosenColor = colorName;
-                    return false;
-                }
-            });
-
-            if (chosenColor) {
-                $(element).addClass(chosenColor + "Color");
-            }
-        }
-    };
+    */
 });
 
     
