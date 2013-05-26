@@ -5,15 +5,16 @@
         var self = this;
 
         self.header = ko.observable("Example");
-        self.notes = ko.observableArray(
-            [{  Title: "Ein PostIt", Message: "Hello World" },
-             { Title: "Zweites Beispiel", Message: "Alles mit Bindings" },
-             { Title: "Drittes Beispiel", Message: "Geladen über WebApi" }]);
+        self.notes = ko.observableArray();
 
         self.loadData = function () {
 
-            $.ajax('/URL').done(function (xhr) {
+            $.ajax('/api/note').done(function (xhr) {
                 self.notes = mapping.fromJS(xhr, {}, self.notes);
+                
+                // later we will find a better position!
+                $.dropShadows();
+                $.cufon();
             });
         };
     };

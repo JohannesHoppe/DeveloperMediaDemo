@@ -4,7 +4,7 @@
 
         var model = new IndexPageViewModel();
         ko.applyBindings(model, $('#index_template').get(0));
-        //model.loadData();
+        model.loadData();
         
         $.dropShadows();
         $.cufon();

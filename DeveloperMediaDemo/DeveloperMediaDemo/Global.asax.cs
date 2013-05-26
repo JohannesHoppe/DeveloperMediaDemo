@@ -13,8 +13,8 @@ namespace DeveloperMediaDemo
             AreaRegistration.RegisterAllAreas();
 
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
             WebApiConfig.Register(GlobalConfiguration.Configuration);
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
 
             BundleConfig.RegisterLessBundles(BundleTable.Bundles);
             BundleConfig.RegisterScriptBundles(BundleTable.Bundles);
