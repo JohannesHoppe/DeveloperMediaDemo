@@ -8,11 +8,5 @@ namespace DeveloperMediaDemo.Controllers
         {
             return View();
         }
-
-        public virtual ActionResult Edit(int id)
-        {
-            ViewBag.Id = id;
-            return View();
-        }
     }
 }
