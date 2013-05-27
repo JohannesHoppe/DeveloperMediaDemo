@@ -144,6 +144,8 @@
     <Compile Include="Models\Note.cs" />
     <Compile Include="Models\PagedList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Scripts\app\EditPageViewModel.js" />
+    <Content Include="Scripts\app\editPage.js" />
     <Content Include="Scripts\app\indexPage.js" />
     <Content Include="Scripts\jquery.cufon.js">
       <DependentUpon>jquery-1.9.1.js</DependentUpon>
