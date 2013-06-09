@@ -1,4 +1,4 @@
-﻿define(['knockout', 'jquery', 'EditPageViewModel', 'knockout.bindings', 'jquery.plugins'], function (ko, $, EditPageViewModel) {
+﻿define(['knockout', 'jquery', 'app/EditPageViewModel', 'knockout.bindings', 'jquery.plugins'], function (ko, $, EditPageViewModel) {
 
     var init = function (id) {
 

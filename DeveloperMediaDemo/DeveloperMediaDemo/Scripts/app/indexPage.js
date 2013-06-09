@@ -1,4 +1,4 @@
-﻿define(['knockout', 'jquery', 'IndexPageViewModel', 'knockout.bindings', 'jquery.plugins'], function (ko, $, IndexPageViewModel) {
+﻿define(['knockout', 'jquery', 'app/IndexPageViewModel', 'knockout.bindings', 'jquery.plugins'], function (ko, $, IndexPageViewModel) {
 
     var init = function() {
 

@@ -8,19 +8,14 @@
         'jquery': 'jquery-1.9.1',
         'knockout': 'knockout-2.2.1',
         'knockout.mapping': 'knockout.mapping-latest',
-        'cufon': 'cufon-yui',
-        'buxtonSketch': 'fonts/Buxton_Sketch_400.font',
-        'datejs': 'date',
-        'indexPage': 'app/indexPage',
-        'IndexPageViewModel': 'app/IndexPageViewModel',
-        'editPage': 'app/editPage',
-        'EditPageViewModel': 'app/EditPageViewModel'
+        'fonts/buxtonSketch': 'fonts/Buxton_Sketch_400.font'
     },
     shim: {
-        'knockout': { deps: ['jquery', 'json2'] },
-        'cufon': { exports: 'Cufon' },
-        'buxtonSketch': { deps: ['cufon'], exports: 'Cufon' },
-        'datejs': { exports: 'Date.CultureInfo' },
-        'json2': { exports: 'JSON.stringify' }
+        'knockout': { deps: ['jquery', 'polyfills/json2'] },
+        'polyfills/cufon': { exports: 'Cufon' },
+        'polyfills/datejs': { exports: 'Date.CultureInfo' },
+        'polyfills/json2': { exports: 'JSON.stringify' },
+        'polyfills/iso8601': { exports: 'Date.parseISO' },
+        'fonts/buxtonSketch': { deps: ['polyfills/cufon'], exports: 'Cufon' },
     }
 });

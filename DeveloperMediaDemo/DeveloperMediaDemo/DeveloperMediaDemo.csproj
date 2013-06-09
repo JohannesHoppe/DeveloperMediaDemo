@@ -147,10 +147,14 @@
     <Content Include="Scripts\app\EditPageViewModel.js" />
     <Content Include="Scripts\app\editPage.js" />
     <Content Include="Scripts\app\indexPage.js" />
+    <Content Include="Scripts\polyfills\iso8601.js" />
+    <Content Include="Scripts\polyfills\iso8601.min.js">
+      <DependentUpon>iso8601.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\jquery.cufon.js">
       <DependentUpon>jquery-1.9.1.js</DependentUpon>
     </Content>
-    <Content Include="Scripts\date.js" />
+    <Content Include="Scripts\polyfills\datejs.js" />
     <Content Include="Scripts\app\IndexPageViewModel.js" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js">
       <DependentUpon>jquery-1.9.1.js</DependentUpon>
@@ -204,7 +208,7 @@
     <Content Include="Content\images\mainbg.jpg" />
     <Content Include="Content\images\favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\cufon-yui.js" />
+    <Content Include="Scripts\polyfills\cufon.js" />
     <Content Include="Scripts\fonts\Buxton_Sketch_400.font.js" />
     <Content Include="Scripts\fonts\Segoe_Marker_400.font.js" />
     <Content Include="Scripts\fonts\SketchFlow_Print_400.font.js" />
