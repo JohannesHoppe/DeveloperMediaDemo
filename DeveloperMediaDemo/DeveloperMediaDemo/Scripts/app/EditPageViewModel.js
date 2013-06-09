@@ -6,6 +6,7 @@
 
         self.Id = ko.observable();
         self.Title = ko.observable();
+        self.Categories = ko.observable();
         self.Message = ko.observable();
         self.Added = ko.observable();
         

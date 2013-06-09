@@ -25,12 +25,10 @@
         
             <hr class="clear" />
 
-            <!--
             <div class="display-label rowLeft">Categories:</div>
             <div class="display-field rowRight">
-                <ul data-bind="template: { name: 'categories_list', foreach: Categories }"></ul>
+                <ul data-bind="template: { name: 'categories_list', foreach: ['important', 'hobby' ,'private'] }"></ul>
             </div>
-            -->
 
         </fieldset>
     </div>
@@ -43,6 +41,6 @@
 
 <script type="text/html" id="categories_list">
 
-    <li data-bind="style: { color: Color() }, text: Name"></li>
+    <li data-bind="text: $data"></li>
 
 </script>
