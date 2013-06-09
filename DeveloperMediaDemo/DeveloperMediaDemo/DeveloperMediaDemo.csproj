@@ -148,9 +148,6 @@
     <Content Include="Scripts\app\editPage.js" />
     <Content Include="Scripts\app\indexPage.js" />
     <Content Include="Scripts\polyfills\iso8601.js" />
-    <Content Include="Scripts\polyfills\iso8601.min.js">
-      <DependentUpon>iso8601.js</DependentUpon>
-    </Content>
     <Content Include="Scripts\jquery.cufon.js">
       <DependentUpon>jquery-1.9.1.js</DependentUpon>
     </Content>
@@ -172,7 +169,7 @@
     <Content Include="Scripts\jquery.plugins.js">
       <DependentUpon>jquery-1.9.1.js</DependentUpon>
     </Content>
-    <Content Include="Scripts\json2.js" />
+    <Content Include="Scripts\polyfills\json2.js" />
     <Content Include="Scripts\knockout-2.2.1.debug.js">
       <DependentUpon>knockout-2.2.1.js</DependentUpon>
     </Content>
