@@ -144,9 +144,32 @@
     <Compile Include="Models\Note.cs" />
     <Compile Include="Models\PagedList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\notifications\error.png" />
+    <Content Include="Content\images\notifications\info.png" />
+    <Content Include="Content\images\notifications\success.png" />
+    <Content Include="Content\images\notifications\warning.png" />
     <Content Include="Scripts\app\EditPageViewModel.js" />
     <Content Include="Scripts\app\editPage.js" />
     <Content Include="Scripts\app\indexPage.js" />
+    <Content Include="Content\01_main.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\02_page.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\03_validation.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\04_drop_shadow.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\05_sexy_data.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\06_notification.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Scripts\jquery-1.9.1.intellisense.js">
       <DependentUpon>jquery-1.9.1.js</DependentUpon>
     </None>

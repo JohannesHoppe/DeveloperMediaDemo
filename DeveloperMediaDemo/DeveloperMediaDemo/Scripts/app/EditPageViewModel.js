@@ -7,19 +7,22 @@
         self.Id = ko.observable();
         self.Title = ko.observable();
         self.Message = ko.observable();
-        self.Categories = ko.observable();
-        
+        self.Categories = ko.observableArray();
+
+        self.CategoryChoices = ['important', 'hobby', 'private'];
+        self.status = ko.observable('');
         
         self.loadData = function () {
 
             $.ajax('/api/note/' + id).done(function (xhr) {
                 self = mapping.fromJS(xhr, {}, self);
 
+                // later we will find a better position!
                 $.refreshPage();
             });
         };
 
-        self.saveForm = function (formElement) {
+        self.saveForm = function () {
 
             $.ajax({
                 url: '/api/note',

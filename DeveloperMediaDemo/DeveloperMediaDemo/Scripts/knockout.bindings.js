@@ -9,9 +9,14 @@ function ($, ko) {
     ko.bindingHandlers.choseCategoryColor = {
         update: function (element, valueAccessor) {
 
-            var categories = ko.utils.unwrapObservable(valueAccessor());
+            var chosenColor, categories = ko.utils.unwrapObservable(valueAccessor());
 
-            var chosenColor;
+            // remove all already existing CSS classes
+            $.each(colorMapping, function (index, mapping) {
+                $(element).removeClass(mapping.color + "Color");
+            });
+
+            // find new class
             $.each(colorMapping, function (index, mapping) {
                 if ($.inArray(mapping.category, categories) !== -1) {
                     chosenColor = mapping.color;

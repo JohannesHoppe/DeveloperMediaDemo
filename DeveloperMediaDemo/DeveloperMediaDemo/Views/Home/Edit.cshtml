@@ -11,9 +11,14 @@
 
     <h1 data-bind="text: 'Details of Note No. ' + Id()"></h1>
     
-    <div class="drop_shadow bigpostit greenColor">
+    <div class="drop_shadow bigpostit" data-bind="choseCategoryColor: Categories">
            
         <form data-bind="submit: saveForm">
+            
+            <div data-bind="visible: status() == 'success'" class="success">Data was sucessfully saved!</div>
+            <div data-bind="visible: status() == 'error'" class="error">There was an error during saving!</div>
+            <div data-bind="visible: status() == 'info'" class="info">Data was automatically saved!</div>
+
             <fieldset>
         
                 <label class="display-label rowLeft">Title:</label>
@@ -27,12 +32,19 @@
                 <br class="clear">
 
                 <div class="display-label rowLeft">Categories:</div>
-                <div class="display-field rowRight">
-                    <ul data-bind="template: { name: 'categories_list', foreach: ['important', 'hobby' ,'private'] }"></ul>
-                </div> 
-            
-                <br class="clear">
+                
+                <ul class="rowRight" data-bind="foreach: CategoryChoices">
+                    <li>
+                        <input type="checkbox" 
+                               name="Categories" 
+                               data-bind="attr: { value: $data, id: 'label_categories_' + $data},
+                                          checked: $root.Categories"> 
 
+                        <label data-bind="attr: { for: 'label_categories_' + $data }, text: $data"></label>
+                    </li>
+                </ul>
+
+                <br class="clear">
                 <p>
                     <input type="submit" value="Save" style="float:right;">
                 </p>
@@ -46,12 +58,3 @@
     </p>
 
 </div>
-
-<script type="text/html" id="categories_list">
-            
-    <li>
-        <input type="checkbox" name="Categories" data-bind="attr: { value: $data, id: 'label_categories_' + $data}">
-        <label data-bind="attr: { for: 'label_categories_' + $data }, text: $data"></label>
-    </li>
-
-</script>
