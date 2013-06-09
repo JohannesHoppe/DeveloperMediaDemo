@@ -16,9 +16,20 @@
                 $.refreshPage();
             });
         };
+        
+        self.goToCreate = function () {
+            document.location.href = "/Home/Create";
+        };
 
         self.goToDetails = function() {
             document.location.href = "/Home/Edit/" + this.Id();
+        };
+        
+        self.deleteNote = function (data) {
+            $.ajax({
+                url: 'api/note/' + data.Id(),
+                type: 'DELETE'
+            }).success(self.loadData);
         };
     };
 

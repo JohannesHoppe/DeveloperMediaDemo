@@ -9,28 +9,36 @@
 
 <div id="edit_template">
 
-    <h1 data-bind="text: 'Details of ' + Id()"></h1>
+    <h1 data-bind="text: 'Details of Note No. ' + Id()"></h1>
     
     <div class="drop_shadow bigpostit greenColor">
-
-        <fieldset>
+           
+        <form id="createForm">
+            <fieldset>
         
-            <label class="display-label rowLeft">Title:</label>
-            <input class="display-field rowRight" data-bind="value: Title" type="text" />
+                <label class="display-label rowLeft">Title:</label>
+                <input class="display-field rowRight" data-bind="value: Title" type="text" />
 
-            <hr class="clear" />
+                <br class="clear">
         
-            <label class="display-label rowLeft">Message:</label>
-            <textarea  class="display-field rowRight message" data-bind="value: Message"></textarea>
+                <label class="display-label rowLeft">Message:</label>
+                <textarea  class="display-field rowRight message" data-bind="value: Message"></textarea>
         
-            <hr class="clear" />
+                <br class="clear">
 
-            <div class="display-label rowLeft">Categories:</div>
-            <div class="display-field rowRight">
-                <ul data-bind="template: { name: 'categories_list', foreach: ['important', 'hobby' ,'private'] }"></ul>
-            </div>
+                <div class="display-label rowLeft">Categories:</div>
+                <div class="display-field rowRight">
+                    <ul data-bind="template: { name: 'categories_list', foreach: ['important', 'hobby' ,'private'] }"></ul>
+                </div> 
+            
+                <br class="clear">
 
-        </fieldset>
+                <p>
+                    <input type="submit" value="Save" style="float:right;">
+                </p>
+
+            </fieldset> 
+        </form>
     </div>
     
     <p>
@@ -40,7 +48,10 @@
 </div>
 
 <script type="text/html" id="categories_list">
-
-    <li data-bind="text: $data"></li>
+            
+    <li>
+        <input type="checkbox" name="Categories" data-bind="attr: { value: $data, id: 'label_categories_' + $data}">
+        <label data-bind="attr: { for: 'label_categories_' + $data }, text: $data"></label>
+    </li>
 
 </script>

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
     <TargetFrameworkProfile />
-    <JSLintSkip>\Scripts\cufon-yui.js|\Scripts\fonts\Buxton_Sketch_400.font.js|\Scripts\fonts\Segoe_Marker_400.font.js|\Scripts\fonts\SketchFlow_Print_400.font.js|\Scripts\history.js-modified\history.adapter.jquery.js|\Scripts\history.js-modified\history.html4.js|\Scripts\history.js-modified\history.js|\Scripts\jquery-1.8.3.js|\Scripts\jquery.validate.js|\Scripts\jquery.validate-vsdoc.js|\Scripts\jquery.validate.min.js|\Scripts\knockout-2.2.0.js|\Scripts\knockout-2.2.0.debug.js|\Scripts\knockout.mapping-latest.js|\Scripts\knockout.mapping-latest.debug.js|\Scripts\MicrosoftMvcValidation.debug.js|\Scripts\MicrosoftMvcValidation.js|\Scripts\date.js|\Scripts\json2.js|\Scripts\jquery.serializeObject.js|\Scripts\sammy-0.7.4.js|\Scripts\sammy-0.7.4.min.js|\Scripts\jquery-1.9.1.js|\Scripts\jquery-1.9.1.intellisense.js|\Scripts\jquery-1.9.1.min.js|\Scripts\knockout-2.2.1.js|\Scripts\knockout-2.2.1.debug.js|\Scripts\jasmine\jasmine.js|\Scripts\jasmine\jasmine-html.js</JSLintSkip>
+    <JSLintSkip>\Scripts\cufon-yui.js|\Scripts\fonts\Buxton_Sketch_400.font.js|\Scripts\fonts\Segoe_Marker_400.font.js|\Scripts\fonts\SketchFlow_Print_400.font.js|\Scripts\history.js-modified\history.adapter.jquery.js|\Scripts\history.js-modified\history.html4.js|\Scripts\history.js-modified\history.js|\Scripts\jquery-1.8.3.js|\Scripts\jquery.validate.js|\Scripts\jquery.validate-vsdoc.js|\Scripts\jquery.validate.min.js|\Scripts\knockout-2.2.0.js|\Scripts\knockout-2.2.0.debug.js|\Scripts\knockout.mapping-latest.debug.js|\Scripts\MicrosoftMvcValidation.debug.js|\Scripts\MicrosoftMvcValidation.js|\Scripts\date.js|\Scripts\json2.js|\Scripts\jquery.serializeObject.js|\Scripts\sammy-0.7.4.js|\Scripts\sammy-0.7.4.min.js|\Scripts\jasmine\jasmine.js|\Scripts\jasmine\jasmine-html.js|\Scripts\polyfills\cufon.js|\Scripts\polyfills\datejs.js|\Scripts\polyfills\iso8601.js|\Scripts\polyfills\json2.js|\Scripts\jquery-1.9.1.js|\Scripts\require.js|\Scripts\r.js|\Scripts\knockout-2.2.1.js</JSLintSkip>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -147,17 +147,13 @@
     <Content Include="Scripts\app\EditPageViewModel.js" />
     <Content Include="Scripts\app\editPage.js" />
     <Content Include="Scripts\app\indexPage.js" />
-    <Content Include="Scripts\polyfills\iso8601.js" />
-    <Content Include="Scripts\jquery.cufon.js">
-      <DependentUpon>jquery-1.9.1.js</DependentUpon>
-    </Content>
-    <Content Include="Scripts\polyfills\datejs.js" />
-    <Content Include="Scripts\app\IndexPageViewModel.js" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js">
       <DependentUpon>jquery-1.9.1.js</DependentUpon>
     </None>
-    <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js">
+      <DependentUpon>jquery-1.9.1.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.cufon.js">
       <DependentUpon>jquery-1.9.1.js</DependentUpon>
     </Content>
     <Content Include="Scripts\jquery.dropShadows.js">
@@ -169,6 +165,10 @@
     <Content Include="Scripts\jquery.plugins.js">
       <DependentUpon>jquery-1.9.1.js</DependentUpon>
     </Content>
+    <Content Include="Scripts\polyfills\iso8601.js" />
+    <Content Include="Scripts\polyfills\datejs.js" />
+    <Content Include="Scripts\app\IndexPageViewModel.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\polyfills\json2.js" />
     <Content Include="Scripts\knockout-2.2.1.debug.js">
       <DependentUpon>knockout-2.2.1.js</DependentUpon>
@@ -190,10 +190,10 @@
       <DependentUpon>require.js</DependentUpon>
     </Content>
     <Content Include="Scripts\require.js" />
+    <Content Include="Views\Home\Edit.cshtml" />
     <Content Include="Scripts\jquery-1.9.1.min.map">
       <DependentUpon>jquery-1.9.1.js</DependentUpon>
     </Content>
-    <Content Include="Views\Home\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\images\ajax-loader.gif" />
