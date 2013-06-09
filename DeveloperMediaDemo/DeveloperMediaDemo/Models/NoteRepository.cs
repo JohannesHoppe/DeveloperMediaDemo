@@ -9,6 +9,18 @@ namespace DeveloperMediaDemo.Models
     /// </summary>
     public class NoteRepository
     {
+        public static void Create(Note item)
+        {
+            int highestId = 0;
+
+            if (CurrentData.Any()) {
+                highestId = CurrentData.OrderByDescending(i => i.Id).First().Id;
+            }
+
+            item.Id = highestId + 1;
+            CurrentData.Add(item);
+        }
+
         public static Note Read(int id)
         {
             return CurrentData.First(c => c.Id == id);

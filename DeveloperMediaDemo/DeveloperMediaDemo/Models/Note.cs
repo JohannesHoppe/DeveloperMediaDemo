@@ -10,6 +10,7 @@ namespace DeveloperMediaDemo.Models
             Title = String.Empty;
             Message = String.Empty;
             Added = DateTime.Now;
+            Categories = new List<string>();
         }
 
         public int Id { get; set; }

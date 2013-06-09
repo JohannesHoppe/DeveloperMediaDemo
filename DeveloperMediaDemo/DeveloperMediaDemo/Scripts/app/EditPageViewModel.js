@@ -30,10 +30,10 @@
                 data: ko.toJSON(self),
                 contentType: 'application/json'
 
-            }).error(function () {
-                window.alert("Error!");
-            }).success(function () {
-                window.alert("Success!");
+            }).fail(function () {
+                self.status('error');
+            }).done(function () {
+                self.status('success');
             });
         };
 

@@ -16,6 +16,13 @@ namespace DeveloperMediaDemo.Controllers
             return NoteRepository.Read(id);
         }
 
+        public int Post()
+        {
+            var newNote = new Note();
+            NoteRepository.Create(newNote);
+            return newNote.Id;
+        }
+
         public void Put(Note note)
         {
             NoteRepository.Update(note);

@@ -17,11 +17,14 @@
             });
         };
         
-        self.goToCreate = function () {
-            document.location.href = "/Home/Create";
+        self.createNote = function () {
+
+            $.post('api/note/').done(function (newId) {
+                self.goToDetails.call({ Id: function () { return newId; }});
+            });
         };
 
-        self.goToDetails = function() {
+        self.goToDetails = function () {
             document.location.href = "/Home/Edit/" + this.Id();
         };
         
