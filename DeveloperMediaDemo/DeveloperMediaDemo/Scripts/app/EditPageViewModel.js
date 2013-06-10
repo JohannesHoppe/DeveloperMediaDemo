@@ -21,13 +21,11 @@
         self.CategoryChoices = ['important', 'hobby', 'private'];
         self.status = ko.observable('');
         
-        self.loadData = function () {
+        self.loadData = function (callback) {
 
             $.ajax('/api/note/' + id).done(function (xhr) {
                 self = mapping.fromJS(xhr, {}, self);
-
-                // later we will find a better position!
-                $.refreshPage();
+                callback.call(self);
             });
         };
 

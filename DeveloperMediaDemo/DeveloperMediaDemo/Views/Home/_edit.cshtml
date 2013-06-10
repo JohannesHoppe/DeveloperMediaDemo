@@ -1,13 +1,9 @@
-﻿@section scripts  {
-    
-    var id = @ViewBag.Id;
+﻿<section id="edit_view"
+         data-view-model="EditPageViewModel"
+         data-bind="template: { name: 'edit_template' }">
+</section>
 
-    require(['app/editPage'], function(i) { 
-        i.init(id); 
-    });
-}
-
-<div id="edit_template">
+<script type="text/html" id="edit_template">
     
     <h1 data-bind="text: 'Details of Note No. ' + Id()"></h1>
     
@@ -53,7 +49,7 @@
     </div>
     
     <p>
-        <a href="/">&#171; Back to List</a>
+        <a data-bind="changeStateOnClick: { viewId: 'index' }">&#171; Back to List</a>
     </p>
 
-</div>
+</script>

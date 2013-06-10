@@ -7,13 +7,11 @@
         self.header = ko.observable("Example");
         self.notes = ko.observableArray();
 
-        self.loadData = function () {
+        self.loadData = function (callback) {
 
             $.ajax('/api/note').done(function (xhr) {
                 self.notes = mapping.fromJS(xhr, {}, self.notes);
-                
-                // later we will find a better position!
-                $.refreshPage();
+                callback.call(self);
             });
         };
         
