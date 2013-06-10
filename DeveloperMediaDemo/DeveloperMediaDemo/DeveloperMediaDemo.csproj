@@ -188,6 +188,12 @@
     <Content Include="Scripts\jquery.plugins.js">
       <DependentUpon>jquery-1.9.1.js</DependentUpon>
     </Content>
+    <Content Include="Scripts\knockout.validation.debug.js">
+      <DependentUpon>knockout.validation.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\knockout.validation.js">
+      <DependentUpon>knockout-2.2.1.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\polyfills\iso8601.js" />
     <Content Include="Scripts\polyfills\datejs.js" />
     <Content Include="Scripts\app\IndexPageViewModel.js" />
@@ -216,6 +222,9 @@
     <Content Include="Views\Home\Edit.cshtml" />
     <Content Include="Scripts\jquery-1.9.1.min.map">
       <DependentUpon>jquery-1.9.1.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\knockout.legacy.js">
+      <DependentUpon>knockout-2.2.1.js</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>

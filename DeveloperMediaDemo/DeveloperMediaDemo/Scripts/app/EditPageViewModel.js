@@ -1,13 +1,22 @@
-﻿define(['jquery', 'knockout', 'knockout.mapping'], function ($, ko, mapping, routes) {
+﻿define(['jquery', 'knockout', 'knockout.mapping', 'knockout.validation'], function ($, ko, mapping) {
 
     var EditPageViewMode = function(id) {
 
         var self = this;
 
+        ko.validation.configure({
+            decorateElement: true
+        });
+
         self.Id = ko.observable();
-        self.Title = ko.observable();
-        self.Message = ko.observable();
+        self.Title = ko.observable().extend({ required: true });
+        self.Message = ko.observable().extend({ required: true });
         self.Categories = ko.observableArray();
+
+        self.watchValid = ko.validatedObservable({
+            Title: self.Title,
+            Message: self.Message
+        });
 
         self.CategoryChoices = ['important', 'hobby', 'private'];
         self.status = ko.observable('');
@@ -23,6 +32,11 @@
         };
 
         self.saveForm = function () {
+
+            if (!self.watchValid.isValid()) {
+                self.status('error');
+                return;
+            }
 
             $.ajax({
                 url: '/api/note',
