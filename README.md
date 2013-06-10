@@ -1,3 +1,4 @@
+# Permalink: http://bit.ly/devMediaCode
 ![Screenshot](https://raw.github.com/JohannesHoppe/DeveloperMediaDemo/master/screenshot.png)
 
 
