@@ -1,4 +1,4 @@
-﻿define(['jquery',
+﻿define(['jquery',  
         'knockout'],
 function ($, ko) {
 
@@ -14,9 +14,9 @@ function ($, ko) {
         if (viewModelName) {
 
             events.trigger('loadView');
-            require(['app/' + viewModelName], function(viewModelConstuctor) {
+            require(['app/' + viewModelName], function (ViewModelConstuctor) {
 
-                var model = new viewModelConstuctor(param);
+                var model = new ViewModelConstuctor(param);
                 ko.applyBindings(model, currentView.get(0));
                 currentView.show();
                 
