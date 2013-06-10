@@ -1,6 +1,6 @@
 ﻿define(['jquery', 'knockout', 'knockout.mapping', 'knockout.validation'], function ($, ko, mapping) {
 
-    var EditPageViewMode = function(id) {
+    var EditPageViewModel = function(id) {
 
         var self = this;
 
@@ -53,5 +53,5 @@
 
     };
 
-    return EditPageViewMode;
+    return EditPageViewModel;
 });
