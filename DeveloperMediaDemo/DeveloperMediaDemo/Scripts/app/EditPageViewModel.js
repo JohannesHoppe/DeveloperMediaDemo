@@ -1,25 +1,13 @@
-﻿define(['jquery', 'knockout', 'knockout.mapping', 'knockout.validation'], function ($, ko, mapping) {
+﻿define(['jquery', 'knockout', 'knockout.mapping'], function ($, ko, mapping) {
 
     var EditPageViewMode = function(id) {
 
         var self = this;
 
-        ko.validation.configure({
-            decorateElement: true
-        });
-
         self.Id = ko.observable();
-        self.Title = ko.observable().extend({ required: true });
-        self.Message = ko.observable().extend({ required: true });
+        self.Title = ko.observable();
+        self.Message = ko.observable();
         self.Categories = ko.observableArray();
-
-        self.watchValid = ko.validatedObservable({
-            Title: self.Title,
-            Message: self.Message
-        });
-
-        self.CategoryChoices = ['important', 'hobby', 'private'];
-        self.status = ko.observable('');
         
         self.loadData = function () {
 
@@ -30,27 +18,6 @@
                 $.refreshPage();
             });
         };
-
-        self.saveForm = function () {
-
-            if (!self.watchValid.isValid()) {
-                self.status('error');
-                return;
-            }
-
-            $.ajax({
-                url: '/api/note',
-                type: 'put',
-                data: ko.toJSON(self),
-                contentType: 'application/json'
-
-            }).fail(function () {
-                self.status('error');
-            }).done(function () {
-                self.status('success');
-            });
-        };
-
     };
 
     return EditPageViewMode;
