@@ -13,7 +13,7 @@
     
     <div class="drop_shadow bigpostit" data-bind="choseCategoryColor: Categories">
            
-        <form data-bind="submit: saveForm">
+        <form data-bind="submit: function() { return false; }">
             <fieldset>
         
                 <label class="display-label rowLeft">Title:</label>

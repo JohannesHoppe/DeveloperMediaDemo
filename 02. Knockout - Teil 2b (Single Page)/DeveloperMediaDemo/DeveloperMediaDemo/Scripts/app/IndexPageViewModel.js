@@ -1,4 +1,4 @@
-﻿define(['jquery', 'knockout', 'knockout.mapping'], function ($, ko, mapping) {
+﻿define(['jquery', 'knockout', 'knockout.mapping', 'singlePage/appState'], function ($, ko, mapping, appState) {
 
     var IndexPageViewModel = function () {
 
@@ -16,16 +16,11 @@
         };
         
         self.createNote = function () {
-
             $.post('api/note/').done(function (newId) {
-                self.goToDetails.call({ Id: function () { return newId; }});
+                appState.changeState("edit", newId);
             });
         };
-
-        self.goToDetails = function () {
-            document.location.href = "/Home/Edit/" + this.Id();
-        };
-        
+       
         self.deleteNote = function (data) {
             $.ajax({
                 url: 'api/note/' + data.Id(),
