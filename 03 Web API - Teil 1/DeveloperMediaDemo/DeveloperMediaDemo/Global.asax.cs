@@ -19,7 +19,7 @@ namespace DeveloperMediaDemo
             BundleConfig.RegisterLessBundles(BundleTable.Bundles);
             BundleConfig.RegisterScriptBundles(BundleTable.Bundles);
 
-            DisableXmlFormatter();
+            //DisableXmlFormatter();
         }
 
         /// <summary>
