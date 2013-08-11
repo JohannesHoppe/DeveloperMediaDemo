@@ -3,8 +3,8 @@
     enforceDefine: true,
     baseUrl: "/Scripts",
     paths: {
-        'jquery': 'jquery-1.9.1',
-        'knockout': 'knockout-2.2.1.debug',
+        'jquery': 'jquery-2.0.3',
+        'knockout': 'knockout-2.3.0.debug',
         'knockout.mapping': 'knockout.mapping-latest',
         'knockout.validation' : 'knockout.validation.debug',
         'fonts/buxtonSketch': 'fonts/Buxton_Sketch_400.font',
