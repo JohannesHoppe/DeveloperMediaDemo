@@ -150,8 +150,6 @@
     <Content Include="Content\images\notifications\success.png" />
     <Content Include="Content\images\notifications\warning.png" />
     <Content Include="Scripts\app\EditPageViewModel.js" />
-    <Content Include="Scripts\app\editPage.js" />
-    <Content Include="Scripts\app\indexPage.js" />
     <Content Include="Content\01_main.less">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -219,13 +217,23 @@
       <DependentUpon>require.js</DependentUpon>
     </Content>
     <Content Include="Scripts\require.js" />
-    <Content Include="Views\Home\Edit.cshtml" />
+    <Content Include="Scripts\sammy-0.7.4.js" />
+    <Content Include="Scripts\sammy-0.7.4.min.js">
+      <DependentUpon>sammy-0.7.4.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\singlePage\app.js" />
+    <Content Include="Scripts\singlePage\appState.js" />
+    <Content Include="Scripts\singlePage\bindLoadingIndicator.js" />
+    <Content Include="Scripts\singlePage\bindRefreshPage.js" />
+    <Content Include="Views\Home\_edit.cshtml" />
     <Content Include="Scripts\jquery-1.9.1.min.map">
       <DependentUpon>jquery-1.9.1.js</DependentUpon>
     </Content>
     <Content Include="Scripts\knockout.legacy.js">
       <DependentUpon>knockout-2.2.1.js</DependentUpon>
     </Content>
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\_page404.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\images\ajax-loader.gif" />
@@ -258,7 +266,7 @@
     </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\_index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
   </ItemGroup>
   <ItemGroup>

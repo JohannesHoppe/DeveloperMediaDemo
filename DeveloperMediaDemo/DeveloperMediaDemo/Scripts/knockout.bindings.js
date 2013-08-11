@@ -1,5 +1,5 @@
-﻿define(['jquery', 'knockout', 'polyfills/iso8601', 'polyfills/datejs'],
-function ($, ko) {
+﻿define(['jquery', 'knockout', 'singlePage/appState', 'polyfills/iso8601', 'polyfills/datejs'],
+function ($, ko, appState) {
 
     var colorMapping = [
         { category: 'important', color: "red" },
@@ -30,16 +30,15 @@ function ($, ko) {
         }
     };
     
-    /*
-    ko.bindingHandlers.changeLocationOnClick = {
+    ko.bindingHandlers.changeStateOnClick = {
         init: function (element, valueAccessor) {
 
-            var url = ko.utils.unwrapObservable(valueAccessor());
+            var value = ko.utils.unwrapObservable(valueAccessor());
             $(element).click(function () {
-                document.location.href = url;
+                appState.changeState(value.viewId, value.param);
             });
         }
-    };*/
+    };
     
     // uses Date.js
     // expects a string in ISO 8601 format
