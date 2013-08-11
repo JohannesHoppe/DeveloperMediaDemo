@@ -3,11 +3,12 @@
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
     <TargetFrameworkProfile />
-    <JSLintSkip>\Scripts\cufon-yui.js|\Scripts\fonts\Buxton_Sketch_400.font.js|\Scripts\fonts\Segoe_Marker_400.font.js|\Scripts\fonts\SketchFlow_Print_400.font.js|\Scripts\history.js-modified\history.adapter.jquery.js|\Scripts\history.js-modified\history.html4.js|\Scripts\history.js-modified\history.js|\Scripts\jquery-1.8.3.js|\Scripts\jquery.validate.js|\Scripts\jquery.validate-vsdoc.js|\Scripts\jquery.validate.min.js|\Scripts\knockout-2.2.0.js|\Scripts\knockout-2.2.0.debug.js|\Scripts\knockout.mapping-latest.debug.js|\Scripts\MicrosoftMvcValidation.debug.js|\Scripts\MicrosoftMvcValidation.js|\Scripts\date.js|\Scripts\json2.js|\Scripts\jquery.serializeObject.js|\Scripts\sammy-0.7.4.js|\Scripts\sammy-0.7.4.min.js|\Scripts\jasmine\jasmine.js|\Scripts\jasmine\jasmine-html.js|\Scripts\polyfills\cufon.js|\Scripts\polyfills\datejs.js|\Scripts\polyfills\iso8601.js|\Scripts\polyfills\json2.js|\Scripts\jquery-1.9.1.js|\Scripts\require.js|\Scripts\r.js|\Scripts\knockout-2.2.1.js</JSLintSkip>
+    <JSLintSkip>\Scripts\cufon-yui.js|\Scripts\fonts\Buxton_Sketch_400.font.js|\Scripts\fonts\Segoe_Marker_400.font.js|\Scripts\fonts\SketchFlow_Print_400.font.js|\Scripts\history.js-modified\history.adapter.jquery.js|\Scripts\history.js-modified\history.html4.js|\Scripts\history.js-modified\history.js|\Scripts\jquery-1.8.3.js|\Scripts\jquery.validate.js|\Scripts\jquery.validate-vsdoc.js|\Scripts\jquery.validate.min.js|\Scripts\knockout-2.2.0.js|\Scripts\knockout-2.2.0.debug.js|\Scripts\knockout.mapping-latest.debug.js|\Scripts\MicrosoftMvcValidation.debug.js|\Scripts\MicrosoftMvcValidation.js|\Scripts\date.js|\Scripts\json2.js|\Scripts\jquery.serializeObject.js|\Scripts\sammy-0.7.4.js|\Scripts\sammy-0.7.4.min.js|\Scripts\jasmine\jasmine.js|\Scripts\jasmine\jasmine-html.js|\Scripts\polyfills\cufon.js|\Scripts\polyfills\datejs.js|\Scripts\polyfills\iso8601.js|\Scripts\polyfills\json2.js|\Scripts\jquery-1.9.1.js|\Scripts\require.js|\Scripts\r.js|\Scripts\knockout-2.2.1.js|\Scripts\jquery-2.0.3.js|\Scripts\jquery-2.0.3.intellisense.js|\Scripts\jquery-2.0.3.min.js|\Scripts\knockout-2.3.0.js|\Scripts\knockout-2.3.0.debug.js</JSLintSkip>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>WebNoteSinglePage.snk</AssemblyOriginatorKeyFile>
@@ -51,8 +52,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Antlr3.Runtime, Version=3.3.1.7705, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="dotless.Core, Version=1.3.1.0, Culture=neutral, PublicKeyToken=96b446c9e63eae34, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -60,7 +62,8 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -79,38 +82,38 @@
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Optimization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.0\lib\net40\System.Web.Optimization.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
@@ -119,9 +122,9 @@
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="WebGrease, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -149,6 +152,7 @@
     <Content Include="Content\images\notifications\info.png" />
     <Content Include="Content\images\notifications\success.png" />
     <Content Include="Content\images\notifications\warning.png" />
+    <Content Include="Scripts\app\Page404ViewModel.js" />
     <Content Include="Scripts\app\EditPageViewModel.js" />
     <Content Include="Content\01_main.less">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -168,51 +172,51 @@
     <Content Include="Content\06_notification.less">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Scripts\jquery-1.9.1.intellisense.js">
-      <DependentUpon>jquery-1.9.1.js</DependentUpon>
+    <None Include="Scripts\jquery-2.0.3.intellisense.js">
+      <DependentUpon>jquery-2.0.3.js</DependentUpon>
     </None>
-    <Content Include="Scripts\jquery-1.9.1.min.js">
-      <DependentUpon>jquery-1.9.1.js</DependentUpon>
+    <Content Include="Scripts\jquery-2.0.3.js" />
+    <Content Include="Scripts\jquery-2.0.3.min.js">
+      <DependentUpon>jquery-2.0.3.js</DependentUpon>
     </Content>
     <Content Include="Scripts\jquery.cufon.js">
-      <DependentUpon>jquery-1.9.1.js</DependentUpon>
+      <DependentUpon>jquery-2.0.3.js</DependentUpon>
     </Content>
     <Content Include="Scripts\jquery.dropShadows.js">
-      <DependentUpon>jquery-1.9.1.js</DependentUpon>
+      <DependentUpon>jquery-2.0.3.js</DependentUpon>
     </Content>
     <Content Include="Scripts\jquery.loadingIndicator.js">
-      <DependentUpon>jquery-1.9.1.js</DependentUpon>
+      <DependentUpon>jquery-2.0.3.js</DependentUpon>
     </Content>
     <Content Include="Scripts\jquery.plugins.js">
-      <DependentUpon>jquery-1.9.1.js</DependentUpon>
+      <DependentUpon>jquery-2.0.3.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\knockout-2.3.0.debug.js">
+      <DependentUpon>knockout-2.3.0.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\knockout-2.3.0.js" />
+    <Content Include="Scripts\knockout.bindings.js">
+      <DependentUpon>knockout-2.3.0.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\knockout.legacy.js">
+      <DependentUpon>knockout-2.3.0.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\knockout.mapping-latest.debug.js">
+      <DependentUpon>knockout-2.3.0.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\knockout.mapping-latest.js">
+      <DependentUpon>knockout-2.3.0.js</DependentUpon>
     </Content>
     <Content Include="Scripts\knockout.validation.debug.js">
-      <DependentUpon>knockout.validation.js</DependentUpon>
+      <DependentUpon>knockout-2.3.0.js</DependentUpon>
     </Content>
     <Content Include="Scripts\knockout.validation.js">
-      <DependentUpon>knockout-2.2.1.js</DependentUpon>
+      <DependentUpon>knockout-2.3.0.js</DependentUpon>
     </Content>
     <Content Include="Scripts\polyfills\iso8601.js" />
     <Content Include="Scripts\polyfills\datejs.js" />
     <Content Include="Scripts\app\IndexPageViewModel.js" />
-    <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\polyfills\json2.js" />
-    <Content Include="Scripts\knockout-2.2.1.debug.js">
-      <DependentUpon>knockout-2.2.1.js</DependentUpon>
-    </Content>
-    <Content Include="Scripts\knockout-2.2.1.js" />
-    <Content Include="Scripts\knockout.bindings.js">
-      <DependentUpon>knockout-2.2.1.js</DependentUpon>
-    </Content>
-    <Content Include="Scripts\knockout.mapping-latest.debug.js">
-      <DependentUpon>knockout.mapping-latest.js</DependentUpon>
-    </Content>
-    <Content Include="Scripts\knockout.mapping-latest.js">
-      <DependentUpon>knockout-2.2.1.js</DependentUpon>
-    </Content>
-    <Content Include="Scripts\r.js">
-      <DependentUpon>require.js</DependentUpon>
-    </Content>
     <Content Include="Scripts\require.config.js">
       <DependentUpon>require.js</DependentUpon>
     </Content>
@@ -226,14 +230,11 @@
     <Content Include="Scripts\singlePage\bindLoadingIndicator.js" />
     <Content Include="Scripts\singlePage\bindRefreshPage.js" />
     <Content Include="Views\Home\_edit.cshtml" />
-    <Content Include="Scripts\jquery-1.9.1.min.map">
-      <DependentUpon>jquery-1.9.1.js</DependentUpon>
-    </Content>
-    <Content Include="Scripts\knockout.legacy.js">
-      <DependentUpon>knockout-2.2.1.js</DependentUpon>
-    </Content>
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\_page404.cshtml" />
+    <Content Include="Scripts\jquery-2.0.3.min.map">
+      <DependentUpon>jquery-2.0.3.js</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\images\ajax-loader.gif" />

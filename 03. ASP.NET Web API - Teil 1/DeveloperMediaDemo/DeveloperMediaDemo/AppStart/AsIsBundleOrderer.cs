@@ -13,7 +13,7 @@ namespace DeveloperMediaDemo.AppStart
     /// </summary>
     public class AsIsBundleOrderer : IBundleOrderer
     {
-        public virtual IEnumerable<FileInfo> OrderFiles(BundleContext context, IEnumerable<FileInfo> files)
+        public virtual IEnumerable<BundleFile> OrderFiles(BundleContext context, IEnumerable<BundleFile> files)
         {
             return files;
         }
