@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace DeveloperMediaDemo.Models
 {
@@ -7,15 +8,19 @@ namespace DeveloperMediaDemo.Models
     {
         public Note()
         {
-            Title = String.Empty;
-            Message = String.Empty;
-            Added = DateTime.Now;
             Categories = new List<string>();
         }
 
         public int Id { get; set; }
+        
+        [Required]
+        [MinLength(5)]
         public string Title { get; set; }
+
+        [Required]
+        [MinLength(10)]
         public string Message { get; set; }
+
         public DateTime Added { get; set; }
 
         public IEnumerable<string> Categories { get; set; }

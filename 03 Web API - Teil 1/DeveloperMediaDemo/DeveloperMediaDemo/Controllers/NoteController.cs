@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Net;
+using System.Net.Http;
 using System.Web.Http;
 using DeveloperMediaDemo.Models;
 
@@ -16,16 +18,21 @@ namespace DeveloperMediaDemo.Controllers
             return NoteRepository.Read(id);
         }
 
-        public int Post()
+        public HttpResponseMessage Post()
         {
             var newNote = new Note();
             NoteRepository.Create(newNote);
-            return newNote.Id;
+            return Request.CreateResponse(HttpStatusCode.Created, newNote.Id);
         }
 
-        public void Put(Note note)
+        public HttpResponseMessage Put(Note note)
         {
-            NoteRepository.Update(note);
+            if (ModelState.IsValid)
+            {
+                NoteRepository.Update(note);
+                return Request.CreateResponse(HttpStatusCode.OK);
+            }
+            return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
         }
 
         public void Delete(int id)

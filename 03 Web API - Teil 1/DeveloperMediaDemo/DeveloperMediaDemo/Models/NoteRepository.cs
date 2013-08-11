@@ -74,9 +74,9 @@ namespace DeveloperMediaDemo.Models
             {
                 return new List<Note>
                     {
-                        new Note { Id = 1, Title = "Ein PostIt", Message = "Hello World", Added = new DateTime(2013, 05, 27, 16, 15, 22), Categories = new[] { "important" }},
-                        new Note { Id = 2, Title = "Zweites Beispiel", Message = "Alles mit Bindings", Added = new DateTime(2013, 05, 27, 16, 30, 23), Categories = new[] { "private" } },
-                        new Note { Id = 3, Title = "Drittes Beispiel", Message = "Geladen über WebApi", Added = new DateTime(2013, 05, 27, 16, 45, 24), Categories = new[] { "hobby", "private" } }
+                        new Note { Id = 1, Title = "Ein PostIt", Message = "Hello World", Added = new DateTime(2013, 08, 13, 16, 15, 22), Categories = new[] { "important" }},
+                        new Note { Id = 2, Title = "Zweites Beispiel", Message = "Alles mit Bindings", Added = new DateTime(2013, 08, 13, 16, 30, 23), Categories = new[] { "private" } },
+                        new Note { Id = 3, Title = "Drittes Beispiel", Message = "Geladen über die ASP.NET Web API", Added = new DateTime(2013, 08, 13, 16, 45, 24), Categories = new[] { "hobby", "private" } }
                     };
             }
         }
