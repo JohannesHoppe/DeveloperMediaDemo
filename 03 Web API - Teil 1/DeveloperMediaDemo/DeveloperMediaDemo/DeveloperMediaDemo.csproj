@@ -198,19 +198,10 @@
     <Content Include="Scripts\knockout.bindings.js">
       <DependentUpon>knockout-2.3.0.js</DependentUpon>
     </Content>
-    <Content Include="Scripts\knockout.legacy.js">
-      <DependentUpon>knockout-2.3.0.js</DependentUpon>
-    </Content>
     <Content Include="Scripts\knockout.mapping-latest.debug.js">
       <DependentUpon>knockout-2.3.0.js</DependentUpon>
     </Content>
     <Content Include="Scripts\knockout.mapping-latest.js">
-      <DependentUpon>knockout-2.3.0.js</DependentUpon>
-    </Content>
-    <Content Include="Scripts\knockout.validation.debug.js">
-      <DependentUpon>knockout-2.3.0.js</DependentUpon>
-    </Content>
-    <Content Include="Scripts\knockout.validation.js">
       <DependentUpon>knockout-2.3.0.js</DependentUpon>
     </Content>
     <Content Include="Scripts\polyfills\iso8601.js" />

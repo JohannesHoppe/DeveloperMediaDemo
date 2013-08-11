@@ -1,4 +1,4 @@
-﻿define(['jquery', 'knockout', 'knockout.mapping', 'knockout.validation'], function ($, ko, mapping) {
+﻿define(['jquery', 'knockout', 'knockout.mapping'], function ($, ko, mapping) {
 
     var Page404ViewModel = function() {
 
