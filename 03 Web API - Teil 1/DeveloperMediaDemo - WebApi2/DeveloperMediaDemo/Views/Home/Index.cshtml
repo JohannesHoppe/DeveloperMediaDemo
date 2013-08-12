@@ -1,0 +1,9 @@
+﻿@Html.Partial("~/Views/Home/_index.cshtml")
+@Html.Partial("~/Views/Home/_edit.cshtml")
+@Html.Partial("~/Views/Home/_page404.cshtml")
+
+@section scripts  {
+    require(['singlePage/appState', 'knockout.bindings'], function(appState) {
+        appState.init();
+    });
+}
