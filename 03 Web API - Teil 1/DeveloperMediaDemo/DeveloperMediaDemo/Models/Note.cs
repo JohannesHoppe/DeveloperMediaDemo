@@ -18,7 +18,7 @@ namespace DeveloperMediaDemo.Models
         public string Title { get; set; }
 
         [Required]
-        [MinLength(10)]
+        [MinLength(10, ErrorMessage = "Don't be lazy!")]
         public string Message { get; set; }
 
         public DateTime Added { get; set; }
