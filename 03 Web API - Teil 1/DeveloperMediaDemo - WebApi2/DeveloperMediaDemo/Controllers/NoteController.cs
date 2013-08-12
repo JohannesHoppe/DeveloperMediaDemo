@@ -13,9 +13,10 @@ namespace DeveloperMediaDemo.Controllers
             return NoteRepository.ReadAll();
         }
 
-        public Note Get(int id)
+        [HttpGet("notes/{noteId}/testtest")]
+        public Note Get(int noteId)
         {
-            return NoteRepository.Read(id);
+            return NoteRepository.Read(noteId);
         }
 
         public HttpResponseMessage Post()
