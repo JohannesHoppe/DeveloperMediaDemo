@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
@@ -16,6 +17,15 @@ namespace DeveloperMediaDemo.Controllers
         public Note Get(int id)
         {
             return NoteRepository.Read(id);
+        }
+
+        /// <summary>
+        /// Searches within the title
+        /// </summary>
+        [ActionName("search")]
+        public Note GetSearch(string titlePart)
+        {
+            return NoteRepository.ReadAll().FirstOrDefault(x => x.Title.Contains(titlePart));
         }
 
         public HttpResponseMessage Post()

@@ -10,8 +10,12 @@
         <tr><th>API</th><th>Description</th></tr>
     </thead>
     <tbody>
-    @foreach (var api in Model)
+    @foreach (var api in Model.OrderBy(m => m.HttpMethod.Method).ThenBy(m => m.RelativePath))
     {
+            // dirty fix for demo (avoids questions for things that can't be changed until Web API vNext)
+            if (api.RelativePath.Contains("?")) { continue; }
+
+        
         <tr>
             <td class="api-name"><a href="@Url.Action("Api", "Help", new { apiId = api.GetFriendlyId() })">@api.HttpMethod.Method @api.RelativePath</a></td>
             <td class="api-documentation">

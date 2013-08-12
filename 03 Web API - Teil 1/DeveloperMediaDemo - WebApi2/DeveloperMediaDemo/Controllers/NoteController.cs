@@ -22,7 +22,7 @@ namespace DeveloperMediaDemo.Controllers
         /// <summary>
         /// Searches within the title
         /// </summary>
-        [HttpGet("note/search/{titlePart}")]
+        [HttpGet("api/Note/search/{titlePart}")]
         public Note GetSearch(string titlePart)
         {
             return NoteRepository.ReadAll().FirstOrDefault(x => x.Title.Contains(titlePart));
