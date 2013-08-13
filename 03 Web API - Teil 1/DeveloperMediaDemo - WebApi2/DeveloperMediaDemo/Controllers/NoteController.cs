@@ -20,12 +20,29 @@ namespace DeveloperMediaDemo.Controllers
         }
 
         /// <summary>
-        /// Searches within the title
+        /// Searches for a the answer to life, universe and everything
         /// </summary>
-        [HttpGet("api/Note/search/{titlePart}")]
-        public Note GetSearch(string titlePart)
+        [HttpGet("api/Note/search/{what:regex(^answer$)}", RouteOrder = 1)]
+        public int GetSearchFor42(string what)
         {
-            return NoteRepository.ReadAll().FirstOrDefault(x => x.Title.Contains(titlePart));
+            return 42;
+        }
+        /// <summary>
+        /// Searches within the title (only alpha-characters "^[A-Za-z]*$")
+        /// </summary>
+        [HttpGet("api/Note/search/{titlePart:alpha}", RouteOrder = 2)]
+        public IEnumerable<Note> GetSearch(string titlePart)
+        {
+            return NoteRepository.ReadAll().Where(x => x.Title.Contains(titlePart));
+        }
+
+        /// <summary>
+        /// Searches for a year
+        /// </summary>
+        [HttpGet("api/Note/search/{year:int}")]
+        public IEnumerable<Note> GetSearch(int year)
+        {
+            return NoteRepository.ReadAll().Where(x => x.Added.Year == year);
         }
 
         public HttpResponseMessage Post()

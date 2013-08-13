@@ -405,9 +405,19 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="M:DeveloperMediaDemo.Controllers.NoteController.GetSearchFor42(System.String)">
+            <summary>
+            Searches for a the answer to life, universe and everything
+            </summary>
+        </member>
         <member name="M:DeveloperMediaDemo.Controllers.NoteController.GetSearch(System.String)">
             <summary>
-            Searches within the title
+            Searches within the title (only alpha-characters "^[A-Za-z]*$")
+            </summary>
+        </member>
+        <member name="M:DeveloperMediaDemo.Controllers.NoteController.GetSearch(System.Int32)">
+            <summary>
+            Searches for a year
             </summary>
         </member>
         <member name="M:DeveloperMediaDemo.MvcApplication.DisableXmlFormatter">
