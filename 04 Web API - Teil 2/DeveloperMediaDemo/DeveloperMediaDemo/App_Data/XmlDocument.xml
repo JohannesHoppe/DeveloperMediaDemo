@@ -405,9 +405,20 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="M:DeveloperMediaDemo.Controllers.NoteController.GetAll">
+            <summary>
+            CRUD: Read All
+            </summary>
+        </member>
+        <member name="M:DeveloperMediaDemo.Controllers.NoteController.Get(System.Int32)">
+            <summary>
+            CRUD: Read One
+            </summary>
+        </member>
         <member name="M:DeveloperMediaDemo.Controllers.NoteController.GetSearchFor42(System.String)">
             <summary>
             Searches for a the answer to life, universe and everything
+            The string for what must be always 'answer'.
             </summary>
         </member>
         <member name="M:DeveloperMediaDemo.Controllers.NoteController.GetSearch(System.String)">
@@ -418,6 +429,21 @@
         <member name="M:DeveloperMediaDemo.Controllers.NoteController.GetSearch(System.Int32)">
             <summary>
             Searches for a year
+            </summary>
+        </member>
+        <member name="M:DeveloperMediaDemo.Controllers.NoteController.Post">
+            <summary>
+            CRUD: Create New
+            </summary>
+        </member>
+        <member name="M:DeveloperMediaDemo.Controllers.NoteController.Put(DeveloperMediaDemo.Models.Note)">
+            <summary>
+            CRUD: Modify existing
+            </summary>
+        </member>
+        <member name="M:DeveloperMediaDemo.Controllers.NoteController.Delete(System.Int32)">
+            <summary>
+            CRUD: Delete one
             </summary>
         </member>
         <member name="M:DeveloperMediaDemo.MvcApplication.DisableXmlFormatter">

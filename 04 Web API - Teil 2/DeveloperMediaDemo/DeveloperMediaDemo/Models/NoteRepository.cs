@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace DeveloperMediaDemo.Models
 {
@@ -29,8 +31,20 @@ namespace DeveloperMediaDemo.Models
         public static IEnumerable<Note> ReadAll()
         {
             return CurrentData;
-        }        
-        
+        }
+
+        public static async Task<IEnumerable<Note>> ReadAllAsync()
+        {
+            // Prefer Task.Run over TaskFactory.StartNew!
+            var result = await Task.Run(async () =>
+            {
+                await Task.Delay(0);
+                return CurrentData;
+            });
+
+            return result;
+        }
+
         public static PagedList<Note> ReadAll(int skip, int take)
         {
             IEnumerable<Note> pagedData = CurrentData.Skip(skip).Take(take);
