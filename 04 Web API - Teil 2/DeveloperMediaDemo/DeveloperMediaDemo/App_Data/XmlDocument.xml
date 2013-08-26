@@ -13,6 +13,21 @@
             should be loaded AFTER require.js
             </summary>
         </member>
+        <member name="T:DeveloperMediaDemo.AppStart.ContainerConfig">
+            <summary>
+            Wires up the Inversion of Control framework (Autofac)
+            </summary>
+        </member>
+        <member name="M:DeveloperMediaDemo.AppStart.ContainerConfig.SetMvcResolver(Autofac.ILifetimeScope)">
+            <summary>
+            Set the dependency resolver for Web API.
+            </summary>
+        </member>
+        <member name="M:DeveloperMediaDemo.AppStart.ContainerConfig.SetWebApiResolver(Autofac.ILifetimeScope)">
+            <summary>
+            Set the dependency resolver for MVC.
+            </summary>
+        </member>
         <member name="M:DeveloperMediaDemo.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
             <summary>
             Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"
@@ -405,6 +420,12 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="T:DeveloperMediaDemo.Code.ValidateModelAttribute">
+            <summary>
+            If model validation fails, this filter returns an HTTP error response that contains the validation errors.
+            In that case, the controller action is NOT invoked.
+            </summary>
+        </member>
         <member name="M:DeveloperMediaDemo.Controllers.AsyncNoteController.GetAll">
             <summary>
             Calling an own awaitable method
@@ -425,20 +446,9 @@
             CRUD: Read One
             </summary>
         </member>
-        <member name="M:DeveloperMediaDemo.Controllers.NoteController.GetSearchFor42(System.String)">
-            <summary>
-            Searches for a the answer to life, universe and everything
-            The string for what must be always 'answer'.
-            </summary>
-        </member>
         <member name="M:DeveloperMediaDemo.Controllers.NoteController.GetSearch(System.String)">
             <summary>
             Searches within the title (only alpha-characters "^[A-Za-z]*$")
-            </summary>
-        </member>
-        <member name="M:DeveloperMediaDemo.Controllers.NoteController.GetSearch(System.Int32)">
-            <summary>
-            Searches for a year
             </summary>
         </member>
         <member name="M:DeveloperMediaDemo.Controllers.NoteController.Post">

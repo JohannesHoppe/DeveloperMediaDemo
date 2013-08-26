@@ -1,6 +1,5 @@
 ﻿using System.Web.Http;
-using System.Web.Http.ValueProviders;
-using System.Web.Http.ValueProviders.Providers;
+using DeveloperMediaDemo.Code;
 
 namespace DeveloperMediaDemo.AppStart
 {
@@ -16,6 +15,8 @@ namespace DeveloperMediaDemo.AppStart
 
             // enables Attribute routing from (Web API 2)
             config.MapHttpAttributeRoutes();
+
+            config.Filters.Add(new ValidateModelAttribute());
         }
     }
 }
