@@ -2,7 +2,6 @@
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Threading.Tasks;
 using System.Web.Http;
 using DeveloperMediaDemo.Models;
 
@@ -10,12 +9,19 @@ namespace DeveloperMediaDemo.Controllers
 {
     public class NoteController : ApiController
     {
+        private readonly INoteRepository _repository;
+
+        public NoteController(INoteRepository repository)
+        {
+            _repository = repository;
+        }
+
         /// <summary>
         /// CRUD: Read All
         /// </summary>
         public IEnumerable<Note> GetAll()
         {
-            return NoteRepository.ReadAll();
+            return _repository.ReadAll();
         }
 
         /// <summary>
@@ -23,34 +29,16 @@ namespace DeveloperMediaDemo.Controllers
         /// </summary>
         public Note Get(int id)
         {
-            return NoteRepository.Read(id);
+            return _repository.Read(id);
         }
 
-        /// <summary>
-        /// Searches for a the answer to life, universe and everything
-        /// The string for what must be always 'answer'.
-        /// </summary>
-        [HttpGet("api/Note/search/{what:regex(^answer$)}", RouteOrder = 1)]
-        public int GetSearchFor42(string what)
-        {
-            return 42;
-        }
         /// <summary>
         /// Searches within the title (only alpha-characters "^[A-Za-z]*$")
         /// </summary>
-        [HttpGet("api/Note/search/{titlePart:alpha}", RouteOrder = 2)]
+        [HttpGet("api/Note/search/{titlePart:alpha}")]
         public IEnumerable<Note> GetSearch(string titlePart)
         {
-            return NoteRepository.ReadAll().Where(x => x.Title.Contains(titlePart));
-        }
-
-        /// <summary>
-        /// Searches for a year
-        /// </summary>
-        [HttpGet("api/Note/search/{year:int}")]
-        public IEnumerable<Note> GetSearch(int year)
-        {
-            return NoteRepository.ReadAll().Where(x => x.Added.Year == year);
+            return _repository.ReadAll().Where(x => x.Title.Contains(titlePart));
         }
 
         /// <summary>
@@ -59,7 +47,7 @@ namespace DeveloperMediaDemo.Controllers
         public HttpResponseMessage Post()
         {
             var newNote = new Note();
-            NoteRepository.Create(newNote);
+            _repository.Create(newNote);
             return Request.CreateResponse(HttpStatusCode.Created, newNote.Id);
         }
 
@@ -70,7 +58,7 @@ namespace DeveloperMediaDemo.Controllers
         {
             if (ModelState.IsValid)
             {
-                NoteRepository.Update(note);
+                _repository.Update(note);
                 return Request.CreateResponse(HttpStatusCode.OK);
             }
             return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
@@ -81,7 +69,7 @@ namespace DeveloperMediaDemo.Controllers
         /// </summary>
         public void Delete(int id)
         {
-            NoteRepository.Delete(id);
+            _repository.Delete(id);
         }
     }
 }

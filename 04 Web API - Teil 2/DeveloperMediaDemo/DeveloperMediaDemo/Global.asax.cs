@@ -19,7 +19,7 @@ namespace DeveloperMediaDemo
             BundleConfig.RegisterLessBundles(BundleTable.Bundles);
             BundleConfig.RegisterScriptBundles(BundleTable.Bundles);
 
-            //DisableXmlFormatter();
+            DisableXmlFormatter();
         }
 
         /// <summary>
@@ -29,6 +29,9 @@ namespace DeveloperMediaDemo
         {
             var formatters = GlobalConfiguration.Configuration.Formatters;
             formatters.Remove(formatters.XmlFormatter);
+
+            // plus: nicer formating!
+            GlobalConfiguration.Configuration.Formatters.JsonFormatter.Indent = true;
         }
     }
 }

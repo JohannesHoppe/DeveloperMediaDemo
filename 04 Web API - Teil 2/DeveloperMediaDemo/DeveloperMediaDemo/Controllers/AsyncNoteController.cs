@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
+﻿using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
@@ -11,27 +8,33 @@ namespace DeveloperMediaDemo.Controllers
 {
     public class AsyncNoteController : ApiController
     {
+        private readonly INoteRepository _repository;
+
+        public AsyncNoteController(INoteRepository repository)
+        {
+            _repository = repository;
+        }
+
         /// <summary>
         /// Calling an own awaitable method
         /// </summary>
-        public async Task<IEnumerable<Note>> GetAllExample()
+        [HttpGet("async/note/")]
+        public async Task<IEnumerable<Note>> GetAll()
         {
-            return await NoteRepository.ReadAllAsync();
+            return await _repository.ReadAllAsync();
         }
-        
+
         /// <summary>
         /// Calling an awaitable framework method
         /// </summary>
-        public async Task<IEnumerable<Note>> GetAll()
+        [HttpGet("async/note/webinar")]
+        public async Task<IEnumerable<Note>> GetAllWebinar()
         {
-            const string address = "https://raw.github.com/JohannesHoppe/DeveloperMediaDemo/master/04%20Web%20API%20-%20Teil%202/DeveloperMediaDemo/DeveloperMediaDemo/Content/webinar.json";
-            
             HttpClient client = new HttpClient();
-            HttpResponseMessage response = await client.GetAsync(address);
+            HttpResponseMessage response = await client.GetAsync("http://johanneshoppe.github.io/DeveloperMediaSlides/webinar.json");
             response.EnsureSuccessStatusCode();
 
-            IEnumerable<Note> notes = await response.Content.ReadAsAsync<IEnumerable<Note>>();
-            return notes;
+            return await response.Content.ReadAsAsync<IEnumerable<Note>>();
         }
     }
 }

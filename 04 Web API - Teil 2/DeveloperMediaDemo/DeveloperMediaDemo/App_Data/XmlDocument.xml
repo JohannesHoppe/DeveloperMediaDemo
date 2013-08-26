@@ -405,6 +405,16 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="M:DeveloperMediaDemo.Controllers.AsyncNoteController.GetAll">
+            <summary>
+            Calling an own awaitable method
+            </summary>
+        </member>
+        <member name="M:DeveloperMediaDemo.Controllers.AsyncNoteController.GetAllWebinar">
+            <summary>
+            Calling an awaitable framework method
+            </summary>
+        </member>
         <member name="M:DeveloperMediaDemo.Controllers.NoteController.GetAll">
             <summary>
             CRUD: Read All

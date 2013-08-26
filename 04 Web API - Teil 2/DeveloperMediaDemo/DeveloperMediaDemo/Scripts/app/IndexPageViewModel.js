@@ -10,6 +10,7 @@
         self.loadData = function (callback) {
 
             $.ajax('/api/note').done(function (xhr) {
+            //$.ajax('/async/note/webinar').done(function (xhr) {
                 self.notes = mapping.fromJS(xhr, {}, self.notes);
                 callback.call(self);
             });
