@@ -12,6 +12,12 @@ namespace DeveloperMediaDemo.Controllers
     {
         private readonly INoteRepository _repository;
 
+        // fallback: poor mans DI
+        public NoteController()
+        {
+            _repository = new NoteRepository();
+        }
+
         public NoteController(INoteRepository repository)
         {
             _repository = repository;
