@@ -16,7 +16,7 @@ namespace DeveloperMediaDemo.AppStart
             // enables Attribute routing from (Web API 2)
             config.MapHttpAttributeRoutes();
 
-            config.Filters.Add(new ValidateModelAttribute());
+            //config.Filters.Add(new ValidateModelAttribute());
         }
     }
 }

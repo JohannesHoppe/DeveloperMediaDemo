@@ -36,10 +36,17 @@ namespace DeveloperMediaDemo.Controllers
         /// <summary>
         /// Searches within the title (only alpha-characters "^[A-Za-z]*$")
         /// </summary>
-        [HttpGet("api/Note/search/{titlePart:alpha}")]
-        public IEnumerable<Note> GetSearch(string titlePart)
+        [HttpGet("api/note/search/{titlePart:alpha}")]
+        public IHttpActionResult GetSearch(string titlePart)
         {
-            return _repository.ReadAll().Where(x => x.Title.Contains(titlePart));
+            var result = _repository.ReadAll().Where(x => x.Title.Contains(titlePart)).ToList();
+
+            if (!result.Any())
+            {
+                return NotFound();
+            }
+            
+            return Content(HttpStatusCode.OK, result);
         }
 
         /// <summary>
@@ -58,12 +65,8 @@ namespace DeveloperMediaDemo.Controllers
         [ValidateModel]
         public HttpResponseMessage Put(Note note)
         {
-            if (ModelState.IsValid)
-            {
-                _repository.Update(note);
-                return Request.CreateResponse(HttpStatusCode.OK);
-            }
-            return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+            _repository.Update(note);
+            return Request.CreateResponse(HttpStatusCode.OK);
         }
 
         /// <summary>
