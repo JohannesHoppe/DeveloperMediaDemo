@@ -16,6 +16,8 @@ namespace DeveloperMediaDemo
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
+            ContainerConfig.RegisterDependencyResolver();
+
             BundleConfig.RegisterLessBundles(BundleTable.Bundles);
             BundleConfig.RegisterScriptBundles(BundleTable.Bundles);
 
