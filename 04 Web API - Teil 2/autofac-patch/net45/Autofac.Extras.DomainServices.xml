@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Autofac.Extras.DomainServices</name>
+    </assembly>
+    <members>
+        <member name="T:Autofac.Extras.DomainServices.AutofacDomainServiceFactory">
+            <summary>
+            Provides an interface for <see cref="T:System.ServiceModel.DomainServices.Server.DomainService"/> factory implementations.
+            </summary>
+        </member>
+        <member name="M:Autofac.Extras.DomainServices.AutofacDomainServiceFactory.#ctor(Autofac.Integration.Web.IContainerProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Autofac.Extras.DomainServices.AutofacDomainServiceFactory"/> class.
+            </summary>
+            <param name="containerProvider">The container provider.</param>
+            <exception cref="T:System.ArgumentNullException">containerProvider</exception>
+        </member>
+        <member name="M:Autofac.Extras.DomainServices.AutofacDomainServiceFactory.CreateDomainService(System.Type,System.ServiceModel.DomainServices.Server.DomainServiceContext)">
+            <summary>
+            Creates a new <see cref="T:System.ServiceModel.DomainServices.Server.DomainService"/> instance.
+            </summary>
+            <param name="domainServiceType">The <see cref="T:System.Type"/> of <see cref="T:System.ServiceModel.DomainServices.Server.DomainService"/> to create.</param>
+            <param name="context">The current <see cref="T:System.ServiceModel.DomainServices.Server.DomainServiceContext"/>.</param>
+            <returns>
+            A <see cref="T:System.ServiceModel.DomainServices.Server.DomainService"/> instance.
+            </returns>
+        </member>
+        <member name="M:Autofac.Extras.DomainServices.AutofacDomainServiceFactory.ReleaseDomainService(System.ServiceModel.DomainServices.Server.DomainService)">
+            <summary>
+            Releases an existing <see cref="T:System.ServiceModel.DomainServices.Server.DomainService"/> instance.
+            </summary>
+            <param name="domainService">The <see cref="T:System.ServiceModel.DomainServices.Server.DomainService"/> instance to release.</param>
+        </member>
+        <member name="T:Autofac.Extras.DomainServices.AutofacDomainServiceModule">
+            <summary>
+            Initializes all registrated DomainServices. 
+            </summary>
+        </member>
+        <member name="M:Autofac.Extras.DomainServices.AutofacDomainServiceModule.AttachToComponentRegistration(Autofac.Core.IComponentRegistry,Autofac.Core.IComponentRegistration)">
+            <summary>
+            Override to attach module-specific functionality to a
+            component registration.
+            </summary>
+            <remarks>This method will be called for all existing <i>and future</i> component
+            registrations - ordering is not important.</remarks>
+            <param name="componentRegistry">The component registry.</param>
+            <param name="registration">The registration to attach functionality to.</param>
+        </member>
+    </members>
+</doc>

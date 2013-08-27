@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Autofac.Extras.NHibernate</name>
+    </assembly>
+    <members>
+        <member name="T:Autofac.Extras.NHibernate.Bytecode.AutofacBytecodeProvider">
+            <summary>
+            Autofac bytecode provider implementation.
+            </summary>
+        </member>
+        <member name="M:Autofac.Extras.NHibernate.Bytecode.AutofacBytecodeProvider.#ctor(Autofac.IComponentContext,NHibernate.Bytecode.IProxyFactoryFactory,NHibernate.Bytecode.ICollectionTypeFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Autofac.Extras.NHibernate.Bytecode.AutofacBytecodeProvider"/> class.
+            </summary>
+            <param name="container">The container.</param>
+            <param name="proxyFactoryFactory">The proxy factory factory.</param>
+            <param name="collectionTypeFactory">The collection type factory.</param>
+        </member>
+        <member name="M:Autofac.Extras.NHibernate.Bytecode.AutofacBytecodeProvider.GetReflectionOptimizer(System.Type,NHibernate.Properties.IGetter[],NHibernate.Properties.ISetter[])">
+            <summary>
+            Retrieve the <see cref="T:NHibernate.Bytecode.IReflectionOptimizer"/> delegate for this provider
+            capable of generating reflection optimization components.
+            </summary>
+            <param name="clazz">The class to be reflected upon.</param>
+            <param name="getters">All property getters to be accessed via reflection.</param>
+            <param name="setters">All property setters to be accessed via reflection.</param>
+            <returns>
+            The reflection optimization delegate.
+            </returns>
+        </member>
+        <member name="P:Autofac.Extras.NHibernate.Bytecode.AutofacBytecodeProvider.ObjectsFactory">
+            <summary>
+            NHibernate's object instaciator.
+            </summary>
+            <remarks>
+            For entities <see cref="T:NHibernate.Bytecode.IReflectionOptimizer"/> and its implementations.
+            </remarks>
+        </member>
+        <member name="P:Autofac.Extras.NHibernate.Bytecode.AutofacBytecodeProvider.ProxyFactoryFactory">
+            <summary>
+            The specific factory for this provider capable of
+            generating run-time proxies for lazy-loading purposes.
+            </summary>
+        </member>
+        <member name="P:Autofac.Extras.NHibernate.Bytecode.AutofacBytecodeProvider.CollectionTypeFactory">
+            <summary>
+            Instanciator of NHibernate's collections default types.
+            </summary>
+        </member>
+        <member name="T:Autofac.Extras.NHibernate.Bytecode.AutofacObjectsFactory">
+            <summary>
+            Interface for instanciate all NHibernate objects.
+            </summary>
+        </member>
+        <member name="M:Autofac.Extras.NHibernate.Bytecode.AutofacObjectsFactory.#ctor(Autofac.IComponentContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Autofac.Extras.NHibernate.Bytecode.AutofacObjectsFactory"/> class.
+            </summary>
+            <param name="container">The container.</param>
+        </member>
+        <member name="M:Autofac.Extras.NHibernate.Bytecode.AutofacObjectsFactory.CreateInstance(System.Type)">
+            <summary>
+            Creates an instance of the specified type.
+            </summary>
+            <param name="type">The type of object to create.</param>
+            <returns>
+            A reference to the created object.
+            </returns>
+        </member>
+        <member name="M:Autofac.Extras.NHibernate.Bytecode.AutofacObjectsFactory.CreateInstance(System.Type,System.Boolean)">
+            <summary>
+            Creates an instance of the specified type.
+            </summary>
+            <param name="type">The type of object to create.</param>
+            <param name="nonPublic">true if a public or nonpublic default constructor can match; false if only a public default constructor can match.</param>
+            <returns>
+            A reference to the created object.
+            </returns>
+        </member>
+        <member name="M:Autofac.Extras.NHibernate.Bytecode.AutofacObjectsFactory.CreateInstance(System.Type,System.Object[])">
+            <summary>
+            Creates an instance of the specified type using the constructor
+            that best matches the specified parameters.
+            </summary>
+            <param name="type">The type of object to create.</param>
+            <param name="ctorArgs">An array of constructor arguments.</param>
+            <returns>
+            A reference to the created object.
+            </returns>
+        </member>
+        <member name="T:Autofac.Extras.NHibernate.Bytecode.AutofacReflectionOptimizer">
+            <summary>
+            Reflection optimizer implementation.
+            </summary>
+        </member>
+        <member name="M:Autofac.Extras.NHibernate.Bytecode.AutofacReflectionOptimizer.#ctor(Autofac.IComponentContext,System.Type,NHibernate.Properties.IGetter[],NHibernate.Properties.ISetter[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Autofac.Extras.NHibernate.Bytecode.AutofacReflectionOptimizer"/> class.
+            </summary>
+            <param name="container">The container.</param>
+            <param name="mappedType">The type being mapped.</param>
+            <param name="getters">The getters.</param>
+            <param name="setters">The setters.</param>
+        </member>
+        <member name="M:Autofac.Extras.NHibernate.Bytecode.AutofacReflectionOptimizer.CreateInstance">
+            <summary>
+            Creates the instance.
+            </summary>
+            <returns>The instance.</returns>
+        </member>
+        <member name="M:Autofac.Extras.NHibernate.Bytecode.AutofacReflectionOptimizer.ThrowExceptionForNoDefaultCtor(System.Type)">
+            <summary>
+            Determines if an exception should be thrown for when no default constructor is found.
+            </summary>
+            <param name="type">The type.</param>
+        </member>
+    </members>
+</doc>
