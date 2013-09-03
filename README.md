@@ -29,3 +29,11 @@
 2. [Presentation auf Github](http://johanneshoppe.github.io/DeveloperMediaSlides/index_webapi.html)
 3. [Dokumentation auf Github](https://github.com/JohannesHoppe/DeveloperMediaDemo/blob/master/Documentation/03.%20ASP.NET%20Web%20API%20Webinar.md) / [PDF](https://github.com/JohannesHoppe/DeveloperMediaDemo/blob/master/Documentation/03.%20ASP.NET%20Web%20API%20Webinar.pdf)
 4. __[Download Demo-Code und Dokumentation (.zip)](http://dl.bintray.com/johanneshoppe/DeveloperMediaDemo/DeveloperMediaWebinar_ASPNET_Web_API_Teil1.zip?direct)__  
+
+
+## ASP.NET Web API - Teil 2
+
+1. [Live Webinar](http://developer-media.de/portfolioentry/asp-net-web-api-teil-2/)
+2. [Presentation auf Github](http://johanneshoppe.github.io/DeveloperMediaSlides/index_webapi.html)
+3. [Dokumentation auf Github](https://github.com/JohannesHoppe/DeveloperMediaDemo/blob/master/Documentation/04.%20ASP.NET%20Web%20API%20Webinar.md) / [PDF](https://github.com/JohannesHoppe/DeveloperMediaDemo/blob/master/Documentation/04.%20ASP.NET%20Web%20API%20Webinar.pdf)
+4. __[Download Demo-Code und Dokumentation (.zip)](http://dl.bintray.com/johanneshoppe/DeveloperMediaDemo/DeveloperMediaWebinar_ASPNET_Web_API_Teil2.zip?direct)__  
