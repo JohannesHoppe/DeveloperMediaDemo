@@ -1,0 +1,33 @@
+﻿<section id="index_view"
+         data-view-model="IndexPageViewModel"
+         data-bind="template: { name: 'index_template' }">
+</section>
+
+<script type="text/html" id="index_template">
+
+    <h1 data-bind="text: header"></h1>
+    
+    <p>
+        <a data-bind="click: createNote">Create New</a>
+    </p>
+
+    <div data-bind="foreach: notes">
+        
+        <div class="drop_shadow postit" data-bind="choseCategoryColor: Categories">
+            
+            <a class="deleteLink" data-bind="click: $root.deleteNote">x</a>
+
+            <div class="sexy_date">
+                <h1 class="day" data-bind="dateText: Added, datePattern: 'dd'"></h1> 
+                <h1 class="month" data-bind="dateText: Added, datePattern: 'MMM'"></h1> 
+                <h1 class="year" data-bind="dateText: Added, datePattern: 'yyyy'"></h1>
+            </div>
+
+            <h2 data-bind="text: Title"></h2>
+            <p data-bind="text: Message" class="message"></p>
+                         
+            <a data-bind="changeStateOnClick: { viewId: 'edit', param: Id() } ">Details</a>
+            
+        </div> 
+    </div>
+</script>

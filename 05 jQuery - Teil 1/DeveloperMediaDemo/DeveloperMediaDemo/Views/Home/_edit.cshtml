@@ -1,0 +1,55 @@
+﻿<section id="edit_view"
+         data-view-model="EditPageViewModel"
+         data-bind="template: { name: 'edit_template' }">
+</section>
+
+<script type="text/html" id="edit_template">
+    
+    <h1 data-bind="text: 'Details of Note No. ' + Id()"></h1>
+    
+    <div data-bind="visible: status() == 'success'" class="success" style="display: none">Data was sucessfully saved!</div>
+    <div data-bind="visible: status() == 'error'" class="error" style="display: none">There was an error during saving!</div>
+    <div data-bind="visible: status() == 'info'" class="info" style="display: none">Data was automatically saved!</div>
+    
+    <div class="drop_shadow bigpostit" data-bind="choseCategoryColor: Categories">
+           
+        <form data-bind="submit: saveForm ">
+            <fieldset>
+        
+                <label class="display-label rowLeft">Title:</label>
+                <input class="display-field rowRight" data-bind="value: Title" type="text" /> 
+
+                <br class="clear">
+        
+                <label class="display-label rowLeft">Message:</label>
+                <textarea  class="display-field rowRight message" data-bind="value: Message"></textarea>
+        
+                <br class="clear">
+
+                <div class="display-label rowLeft">Categories:</div>
+                
+                <ul class="rowRight" data-bind="foreach: CategoryChoices">
+                    <li>
+                        <input type="checkbox" 
+                               name="Categories" 
+                               data-bind="attr: { value: $data, id: 'label_categories_' + $data},
+                                          checked: $root.Categories"> 
+
+                        <label data-bind="attr: { for: 'label_categories_' + $data }, text: $data"></label>
+                    </li>
+                </ul>
+
+                <br class="clear">
+                <p>
+                    <input type="submit" value="Save" style="float:right;">
+                </p>
+
+            </fieldset> 
+        </form>
+    </div>
+    
+    <p>
+        <a data-bind="changeStateOnClick: { viewId: 'index' }">&#171; Back to List</a>
+    </p>
+
+</script>

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DeveloperMediaDemo</name>
+    </assembly>
+    <members>
+        <member name="T:DeveloperMediaDemo.AppStart.AsIsBundleOrderer">
+            <summary>
+            Will ensure bundles are included in the order you register them
+            
+            The default orderer generally respects the order of the includes
+            but it promotes a few special files to the top, i.e. jquery which
+            should be loaded AFTER require.js
+            </summary>
+        </member>
+        <member name="M:DeveloperMediaDemo.Controllers.NoteController.GetAll">
+            <summary>
+            CRUD: Read All
+            </summary>
+        </member>
+        <member name="M:DeveloperMediaDemo.Controllers.NoteController.Get(System.Int32)">
+            <summary>
+            CRUD: Read One
+            </summary>
+        </member>
+        <member name="M:DeveloperMediaDemo.Controllers.NoteController.Post">
+            <summary>
+            CRUD: Create New
+            </summary>
+        </member>
+        <member name="M:DeveloperMediaDemo.Controllers.NoteController.Put(DeveloperMediaDemo.Models.Note)">
+            <summary>
+            CRUD: Modify existing
+            </summary>
+        </member>
+        <member name="M:DeveloperMediaDemo.Controllers.NoteController.Delete(System.Int32)">
+            <summary>
+            CRUD: Delete one
+            </summary>
+        </member>
+        <member name="M:DeveloperMediaDemo.MvcApplication.DisableXmlFormatter">
+            <summary>
+            Disables the Xml Formatter in ASP.NET Web API for easier debugging
+            </summary>
+        </member>
+        <member name="T:DeveloperMediaDemo.Models.NoteRepository">
+            <summary>
+            This is a simple demo repository with no real database connection
+            </summary>
+        </member>
+    </members>
+</doc>
