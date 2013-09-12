@@ -6,13 +6,13 @@ namespace DeveloperMediaDemo.AppStart
 {
     public static class BundleConfig
     {
-        public const string StylesLess    = "~/bundles/styles/less";
-        public const string ScriptsGlobal = "~/bundles/scripts/global";
+        public const string Styles    = "~/bundles/styles/less";
+        public const string Scripts = "~/bundles/scripts/global";
 
         public static void RegisterLessBundles(BundleCollection bundles)
         {
-            Bundle bundle = new Bundle(StylesLess)
-                .Include("~/Content/Site.less",
+            Bundle bundle = new Bundle(Styles)
+                .Include("~/Content/Site.css",
                         "~/Content/jquery.datatables/css/demo_page.css",
                         "~/Content/jquery.datatables/css/demo_table.css");
 
@@ -21,19 +21,12 @@ namespace DeveloperMediaDemo.AppStart
 
         public static IHtmlString RenderLess(string bundleName)
         {
-            if (BundleTable.EnableOptimizations)
-            {
-                string url = BundleTable.Bundles.ResolveBundleUrl(bundleName);
-                string result = string.Format(CultureInfo.InvariantCulture, @"<link rel=""stylesheet"" href=""{0}"" type=""text/css"" />", url);
-                return new HtmlString(result);
-            }
-
-            return Styles.Render(bundleName);
+            return System.Web.Optimization.Styles.Render(bundleName);
         }
 
         public static void RegisterScriptBundles(BundleCollection bundles)
         {
-            Bundle bundle = new ScriptBundle(ScriptsGlobal);
+            Bundle bundle = new ScriptBundle(Scripts);
             bundle.Orderer = new AsIsBundleOrderer();
             bundle.Include(
                 "~/Scripts/require.js",

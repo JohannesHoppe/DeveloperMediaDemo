@@ -9,17 +9,7 @@
                 sPaginationType: "full_numbers",
                 bSort: false,
                 sAjaxSource: "/api/Note/"
-            });
-    
-            // registers simple event handler (does not work!)
-            $('td').click(function() {
-                alert($(this).text());
-            });
-    
-            // registers a delegated event handler
-            $('table').on('click', 'td', function() {
-                alert($(this).text());
-            });
+            });  
         });
     });
 }

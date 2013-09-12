@@ -5,7 +5,7 @@
     <title>Developer Media - Web API Demo</title>
     <link rel="shortcut icon" href="@Url.Content("~/Content/images/favicon.ico")" />
    
-    @BundleConfig.RenderLess(BundleConfig.StylesLess)
+    @BundleConfig.RenderLess(BundleConfig.Styles)
 </head>
 <body>
     
@@ -16,7 +16,7 @@
         </div>
     </div>
    
-@Scripts.Render(BundleConfig.ScriptsGlobal)
+@Scripts.Render(BundleConfig.Scripts)
 <script>@RenderSection("scripts", false)</script>
    
 </body>
