@@ -37,18 +37,6 @@ namespace DeveloperMediaDemo.Models
             return currentData;
         }
 
-        public async Task<IEnumerable<Note>> ReadAllAsync()
-        {
-            // Prefer Task.Run over TaskFactory.StartNew!
-            var result = await Task.Run(async () =>
-            {
-                await Task.Delay(0);
-                return currentData;
-            });
-
-            return result;
-        }
-
         public PagedList<Note> ReadAll(int skip, int take)
         {
             IEnumerable<Note> pagedData = currentData.Skip(skip).Take(take);
@@ -87,9 +75,9 @@ namespace DeveloperMediaDemo.Models
             {
                 return new List<Note>
                     {
-                        new Note { Id = 1, Title = "Ein PostIt", Message = "Hello World", Added = new DateTime(2013, 08, 13, 16, 15, 22), Categories = new[] { "important" }},
-                        new Note { Id = 2, Title = "Zweites Beispiel", Message = "Alles mit Bindings", Added = new DateTime(2013, 08, 13, 16, 30, 23), Categories = new[] { "private" } },
-                        new Note { Id = 3, Title = "Drittes Beispiel", Message = "Geladen über die ASP.NET Web API", Added = new DateTime(2013, 08, 13, 16, 45, 24), Categories = new[] { "hobby", "private" } }
+                        new Note { Id = 1, Title = "Ein PostIt", Message = "Hello World", Added = new DateTime(2013, 09, 12, 16, 15, 22), Categories = new[] { "important" }},
+                        new Note { Id = 2, Title = "Zweites Beispiel", Message = "Diesmal mit jQuery DataTables", Added = new DateTime(2013, 09, 12, 16, 30, 23), Categories = new[] { "private" } },
+                        new Note { Id = 3, Title = "Drittes Beispiel", Message = "Geladen über die ASP.NET Web API", Added = new DateTime(2013, 09, 12, 16, 45, 24), Categories = new[] { "hobby", "private" } }
                     };
             }
         }

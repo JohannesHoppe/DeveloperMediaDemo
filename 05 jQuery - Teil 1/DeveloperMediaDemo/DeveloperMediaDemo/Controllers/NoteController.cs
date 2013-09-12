@@ -20,12 +20,19 @@ namespace DeveloperMediaDemo.Controllers
             _repository = repository;
         }
 
+        /*
         /// <summary>
         /// CRUD: Read All
         /// </summary>
         public IEnumerable<Note> GetAll()
         {
             return _repository.ReadAll();
+        }
+        */
+
+        public DateTableResponse Get(string secho, int iDisplayStart, int iDisplayLength)
+        {
+            return _repository.ReadAll(iDisplayStart, iDisplayLength).ToDateTableResponse(secho);
         }
 
         /// <summary>

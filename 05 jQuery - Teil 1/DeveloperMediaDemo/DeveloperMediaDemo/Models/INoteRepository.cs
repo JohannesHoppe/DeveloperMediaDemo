@@ -11,8 +11,6 @@ namespace DeveloperMediaDemo.Models
 
         IEnumerable<Note> ReadAll();
 
-        Task<IEnumerable<Note>> ReadAllAsync();
-
         PagedList<Note> ReadAll(int skip, int take);
 
         void Update(Note item);

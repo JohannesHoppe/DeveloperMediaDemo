@@ -13,11 +13,6 @@
             should be loaded AFTER require.js
             </summary>
         </member>
-        <member name="M:DeveloperMediaDemo.Controllers.NoteController.GetAll">
-            <summary>
-            CRUD: Read All
-            </summary>
-        </member>
         <member name="M:DeveloperMediaDemo.Controllers.NoteController.Get(System.Int32)">
             <summary>
             CRUD: Read One

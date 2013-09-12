@@ -3,7 +3,7 @@
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
     <TargetFrameworkProfile />
-    <JSLintSkip>\Scripts\cufon-yui.js|\Scripts\fonts\Buxton_Sketch_400.font.js|\Scripts\fonts\Segoe_Marker_400.font.js|\Scripts\fonts\SketchFlow_Print_400.font.js|\Scripts\history.js-modified\history.adapter.jquery.js|\Scripts\history.js-modified\history.html4.js|\Scripts\history.js-modified\history.js|\Scripts\jquery-1.8.3.js|\Scripts\jquery.validate.js|\Scripts\jquery.validate-vsdoc.js|\Scripts\jquery.validate.min.js|\Scripts\knockout-2.2.0.js|\Scripts\knockout-2.2.0.debug.js|\Scripts\knockout.mapping-latest.debug.js|\Scripts\MicrosoftMvcValidation.debug.js|\Scripts\MicrosoftMvcValidation.js|\Scripts\date.js|\Scripts\json2.js|\Scripts\jquery.serializeObject.js|\Scripts\sammy-0.7.4.js|\Scripts\sammy-0.7.4.min.js|\Scripts\jasmine\jasmine.js|\Scripts\jasmine\jasmine-html.js|\Scripts\polyfills\cufon.js|\Scripts\polyfills\datejs.js|\Scripts\polyfills\iso8601.js|\Scripts\polyfills\json2.js|\Scripts\jquery-1.9.1.js|\Scripts\require.js|\Scripts\r.js|\Scripts\knockout-2.2.1.js|\Scripts\jquery-2.0.3.js|\Scripts\jquery-2.0.3.intellisense.js|\Scripts\jquery-2.0.3.min.js|\Scripts\knockout-2.3.0.js|\Scripts\knockout-2.3.0.debug.js</JSLintSkip>
+    <JSLintSkip>\Scripts\cufon-yui.js|\Scripts\fonts\Buxton_Sketch_400.font.js|\Scripts\fonts\Segoe_Marker_400.font.js|\Scripts\fonts\SketchFlow_Print_400.font.js|\Scripts\history.js-modified\history.adapter.jquery.js|\Scripts\history.js-modified\history.html4.js|\Scripts\history.js-modified\history.js|\Scripts\jquery-1.8.3.js|\Scripts\jquery.validate.js|\Scripts\jquery.validate-vsdoc.js|\Scripts\jquery.validate.min.js|\Scripts\knockout-2.2.0.js|\Scripts\knockout-2.2.0.debug.js|\Scripts\knockout.mapping-latest.debug.js|\Scripts\MicrosoftMvcValidation.debug.js|\Scripts\MicrosoftMvcValidation.js|\Scripts\date.js|\Scripts\json2.js|\Scripts\jquery.serializeObject.js|\Scripts\sammy-0.7.4.js|\Scripts\sammy-0.7.4.min.js|\Scripts\jasmine\jasmine.js|\Scripts\jasmine\jasmine-html.js|\Scripts\polyfills\cufon.js|\Scripts\polyfills\datejs.js|\Scripts\polyfills\iso8601.js|\Scripts\polyfills\json2.js|\Scripts\jquery-1.9.1.js|\Scripts\require.js|\Scripts\r.js|\Scripts\knockout-2.2.1.js|\Scripts\jquery-2.0.3.js|\Scripts\jquery-2.0.3.intellisense.js|\Scripts\jquery-2.0.3.min.js|\Scripts\knockout-2.3.0.js|\Scripts\knockout-2.3.0.debug.js|\Scripts\jquery.dataTables.js</JSLintSkip>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -147,13 +147,14 @@
     <Compile Include="AppStart\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NoteController.cs" />
-    <Compile Include="Controllers\TestData.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DateTableResponse.cs" />
     <Compile Include="Models\INoteRepository.cs">
       <DependentUpon>NoteRepository.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\MappingExtensions.cs" />
     <Compile Include="Models\NoteRepository.cs" />
     <Compile Include="Models\Note.cs" />
     <Compile Include="Models\PagedList.cs" />
@@ -163,6 +164,20 @@
     <Content Include="Content\images\notifications\info.png" />
     <Content Include="Content\images\notifications\success.png" />
     <Content Include="Content\images\notifications\warning.png" />
+    <Content Include="Content\jquery.datatables\css\demo_page.css" />
+    <Content Include="Content\jquery.datatables\css\demo_table.css" />
+    <Content Include="Content\jquery.datatables\images\back_disabled.png" />
+    <Content Include="Content\jquery.datatables\images\back_enabled.png" />
+    <Content Include="Content\jquery.datatables\images\back_enabled_hover.png" />
+    <Content Include="Content\jquery.datatables\images\favicon.ico" />
+    <Content Include="Content\jquery.datatables\images\forward_disabled.png" />
+    <Content Include="Content\jquery.datatables\images\forward_enabled.png" />
+    <Content Include="Content\jquery.datatables\images\forward_enabled_hover.png" />
+    <Content Include="Content\jquery.datatables\images\sort_asc.png" />
+    <Content Include="Content\jquery.datatables\images\sort_asc_disabled.png" />
+    <Content Include="Content\jquery.datatables\images\sort_both.png" />
+    <Content Include="Content\jquery.datatables\images\sort_desc.png" />
+    <Content Include="Content\jquery.datatables\images\sort_desc_disabled.png" />
     <Content Include="Scripts\app_\Page404ViewModel.js" />
     <Content Include="Scripts\app_\EditPageViewModel.js" />
     <Content Include="Content\01_main.less">
@@ -183,6 +198,7 @@
     <Content Include="Content\06_notification.less">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\jquery.datatables\images\Sorting icons.psd" />
     <None Include="Scripts\jquery-2.0.3.intellisense.js">
       <DependentUpon>jquery-2.0.3.js</DependentUpon>
     </None>
@@ -193,6 +209,7 @@
     <Content Include="Scripts\jquery.cufon.js">
       <DependentUpon>jquery-2.0.3.js</DependentUpon>
     </Content>
+    <Content Include="Scripts\jquery.dataTables.js" />
     <Content Include="Scripts\jquery.dropShadows.js">
       <DependentUpon>jquery-2.0.3.js</DependentUpon>
     </Content>

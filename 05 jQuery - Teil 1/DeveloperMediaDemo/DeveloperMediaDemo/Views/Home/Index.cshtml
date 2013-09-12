@@ -1,27 +1,42 @@
-﻿<div class="postit">
-    <h2>Hello World</h2>
-</div>        
-
-<script> 
-
-    if (!document.getElementsByClassName) {
-        document.getElementsByClassName = function (className) {
-            return this.querySelectorAll("." + className);
-        };
-        Element.prototype.getElementsByClassName = document.getElementsByClassName;
-    }
-
-    var divs = document.getElementsByClassName('postit');
-
-    for (i = 0; i < divs.length; i++) {
-        divs[i].style.backgroundColor = '#F0F0A6';
-        divs[i].style.padding = '10px';
-    }
-</script>
-
-
-@section scripts  {
-    require([], function() {
+﻿@section scripts  {
+    require(['jquery', 'jquery.dataTables'], function() {
         
+        // loads table  
+        $(function() {
+            $('#example').dataTable({
+                bProcessing: true,
+                bServerSide: true,
+                sPaginationType: "full_numbers",
+                bSort: false,
+                sAjaxSource: "/api/Note/"
+            });
+    
+            // registers simple event handler (does not work!)
+            $('td').click(function() {
+                alert($(this).text());
+            });
+    
+            // registers a delegated event handler
+            $('table').on('click', 'td', function() {
+                alert($(this).text());
+            });
+        });
     });
 }
+
+<table class="display" id="example">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Message</th>
+            <th>Added</th>
+            <th>Categories</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="5" class="dataTables_empty">Loading data from server</td>
+        </tr>
+    </tbody>
+</table>

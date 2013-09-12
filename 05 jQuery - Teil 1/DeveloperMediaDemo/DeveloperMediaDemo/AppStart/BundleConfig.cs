@@ -12,7 +12,9 @@ namespace DeveloperMediaDemo.AppStart
         public static void RegisterLessBundles(BundleCollection bundles)
         {
             Bundle bundle = new Bundle(StylesLess)
-                .Include("~/Content/Site.less");
+                .Include("~/Content/Site.less",
+                        "~/Content/jquery.datatables/css/demo_page.css",
+                        "~/Content/jquery.datatables/css/demo_table.css");
 
             bundles.Add(bundle);
         }
