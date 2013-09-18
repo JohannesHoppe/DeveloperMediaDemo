@@ -29,6 +29,8 @@ namespace DeveloperMediaDemo
         {
             var formatters = GlobalConfiguration.Configuration.Formatters;
             formatters.Remove(formatters.XmlFormatter);
+			// plus: nicer formating!
+            GlobalConfiguration.Configuration.Formatters.JsonFormatter.Indent = true;
         }
     }
 }

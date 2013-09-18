@@ -1,39 +1,57 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace DeveloperMediaDemo.Models
 {
     /// <summary>
     /// This is a simple demo repository with no real database connection
     /// </summary>
-    public class NoteRepository
+    public class NoteRepository : INoteRepository
     {
-        public static void Create(Note item)
+        public NoteRepository()
+        {
+            currentData = InitialData;
+        }
+
+        public void Create(Note item)
         {
             int highestId = 0;
 
-            if (CurrentData.Any()) {
-                highestId = CurrentData.OrderByDescending(i => i.Id).First().Id;
+            if (currentData.Any()) {
+                highestId = currentData.OrderByDescending(i => i.Id).First().Id;
             }
 
             item.Id = highestId + 1;
-            CurrentData.Add(item);
+            currentData.Add(item);
         }
 
-        public static Note Read(int id)
+        public Note Read(int id)
         {
-            return CurrentData.First(c => c.Id == id);
+            return currentData.First(c => c.Id == id);
         }
 
-        public static IEnumerable<Note> ReadAll()
+        public IEnumerable<Note> ReadAll()
         {
-            return CurrentData;
-        }        
-        
-        public static PagedList<Note> ReadAll(int skip, int take)
+            return currentData;
+        }
+
+        public async Task<IEnumerable<Note>> ReadAllAsync()
         {
-            IEnumerable<Note> pagedData = CurrentData.Skip(skip).Take(take);
+            // Prefer Task.Run over TaskFactory.StartNew!
+            var result = await Task.Run(async () =>
+            {
+                await Task.Delay(0);
+                return currentData;
+            });
+
+            return result;
+        }
+
+        public PagedList<Note> ReadAll(int skip, int take)
+        {
+            IEnumerable<Note> pagedData = currentData.Skip(skip).Take(take);
 
             return new PagedList<Note>
                 {
@@ -42,7 +60,7 @@ namespace DeveloperMediaDemo.Models
                 };
         }
 
-        public static void Update(Note item)
+        public void Update(Note item)
         {
             var itemToUpdate = Read(item.Id);
 
@@ -53,30 +71,25 @@ namespace DeveloperMediaDemo.Models
             itemToUpdate.Categories = item.Categories;
         }
 
-        public static void Delete(int id)
+        public void Delete(int id)
         {
             var itemToDelete = Read(id);
-            CurrentData.Remove(itemToDelete);
+            currentData.Remove(itemToDelete);
         }
 
         #region inital data
 
-        static NoteRepository()
-        {
-            CurrentData = InitialData;
-        }
+        private readonly List<Note> currentData;
 
-        private static readonly List<Note> CurrentData;
-
-        private static List<Note> InitialData
+        private List<Note> InitialData
         {
             get
             {
                 return new List<Note>
                     {
-                        new Note { Id = 1, Title = "Ein PostIt", Message = "Hello World", Added = new DateTime(2013, 05, 27, 16, 15, 22), Categories = new[] { "important" }},
-                        new Note { Id = 2, Title = "Zweites Beispiel", Message = "Alles mit Bindings", Added = new DateTime(2013, 05, 27, 16, 30, 23), Categories = new[] { "private" } },
-                        new Note { Id = 3, Title = "Drittes Beispiel", Message = "Geladen über WebApi", Added = new DateTime(2013, 05, 27, 16, 45, 24), Categories = new[] { "hobby", "private" } }
+                        new Note { Id = 1, Title = "Ein PostIt", Message = "Hello World", Added = new DateTime(2013, 08, 13, 16, 15, 22), Categories = new[] { "important" }},
+                        new Note { Id = 2, Title = "Zweites Beispiel", Message = "Alles mit Bindings", Added = new DateTime(2013, 08, 13, 16, 30, 23), Categories = new[] { "private" } },
+                        new Note { Id = 3, Title = "Drittes Beispiel", Message = "Geladen über die ASP.NET Web API", Added = new DateTime(2013, 08, 13, 16, 45, 24), Categories = new[] { "hobby", "private" } }
                     };
             }
         }
