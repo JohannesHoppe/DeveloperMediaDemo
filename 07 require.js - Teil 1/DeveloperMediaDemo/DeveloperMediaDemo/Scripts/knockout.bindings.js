@@ -29,18 +29,7 @@ function ($, ko) {
             }
         }
     };
-    
-    /*
-    ko.bindingHandlers.changeLocationOnClick = {
-        init: function (element, valueAccessor) {
 
-            var url = ko.utils.unwrapObservable(valueAccessor());
-            $(element).click(function () {
-                document.location.href = url;
-            });
-        }
-    };*/
-    
     // uses Date.js
     // expects a string in ISO 8601 format
     ko.bindingHandlers.dateText = {
@@ -54,6 +43,33 @@ function ($, ko) {
             var formatedByDatejs = dt.toString(pattern);
 
             $(element).text(formatedByDatejs);
+        }
+    };
+    
+    /* seems to be a Knockout + jQuery + Adblock Plus bug ... I don't even know where to report that issue?!
+       so i had to add event.stopPropagation();
+       */
+    ko.bindingHandlers.submit = {
+        'init': function (element, valueAccessor, allBindingsAccessor, viewModel) {
+            if (typeof valueAccessor() != "function")
+                throw new Error("The value for a submit binding must be a function");
+            ko.utils.registerEventHandler(element, "submit", function (event) {
+                var handlerReturnValue;
+                var value = valueAccessor();
+                try { handlerReturnValue = value.call(viewModel, element); }
+                finally {
+                    if (handlerReturnValue !== true) {
+                        if (event.preventDefault) {
+                            event.preventDefault();
+
+                            // NEW - required if adblock plus is active!!
+                            event.stopPropagation();
+                        }
+                        else
+                            event.returnValue = false;
+                    }
+                }
+            });
         }
     };
 });

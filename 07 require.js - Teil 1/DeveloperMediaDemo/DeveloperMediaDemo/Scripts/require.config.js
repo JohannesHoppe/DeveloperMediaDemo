@@ -4,7 +4,7 @@
     baseUrl: "/Scripts",
     paths: {
         'jquery': 'jquery-2.0.3',
-        'knockout': 'knockout-2.3.0',
+        'knockout': 'knockout-2.3.0.debug',
         'knockout.mapping': 'knockout.mapping-latest',
         'knockout.validation' : 'knockout.validation.debug',
         'fonts/buxtonSketch': 'fonts/Buxton_Sketch_400.font'
