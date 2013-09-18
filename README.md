@@ -11,7 +11,7 @@
 
 ### 02. Knockout.js für .NET Entwickler - Teil 2
 
->11.06.2013
+>11.06.2013  
 >**Forms & Bindings**  
 >1. [Live Webinar](http://developer-media.de/portfolioentry/webinar-knockout-js-fur-net-entwickler-2/)  
 >2. [Präsentation auf Github](http://johanneshoppe.github.io/DeveloperMediaSlides/index_knockoutjs.html)  
