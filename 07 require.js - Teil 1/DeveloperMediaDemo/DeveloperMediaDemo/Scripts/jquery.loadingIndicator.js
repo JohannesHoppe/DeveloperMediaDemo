@@ -1,4 +1,4 @@
-﻿define(['jquery'], function($) {
+﻿define(['jquery', 'globalEvent'], function ($, globalEvent) {
 
     var addLoadingIndicator = function($el, options) {
 
@@ -47,6 +47,37 @@
     };
 
     $(function () {
-        $(window.document.body).append('<img src="Content/Images/ajax-loader.gif" style="display:none;" alt="preloaded image" />');
+        $(window.document.body).append('<img src="/Content/Images/ajax-loader.gif" style="display:none;" alt="preloaded image" />');
     });
+    
+    /* NEW */
+    
+    var bindLoadingIndicator = function () {
+
+        var main = $('#main');
+
+        globalEvent.bind('loadData', function () {
+
+            if (!main.data('loadingIndicator')) {
+                main.loadingIndicator();
+            }
+
+            main.data('loadingIndicator').show();
+        });
+
+        globalEvent.bind('dataLoaded', function () {
+
+            if (!main.data('loadingIndicator')) {
+                return;
+            }
+
+            main.data('loadingIndicator').hide();
+        });
+    };
+
+    $(bindLoadingIndicator);
+
+
+
+
 });

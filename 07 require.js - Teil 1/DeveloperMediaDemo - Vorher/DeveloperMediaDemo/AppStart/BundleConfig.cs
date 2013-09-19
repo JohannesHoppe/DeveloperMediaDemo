@@ -33,9 +33,19 @@ namespace DeveloperMediaDemo.AppStart
         {
             Bundle bundle = new ScriptBundle(ScriptsGlobal);
             bundle.Orderer = new AsIsBundleOrderer();
+
+            bundle.Include(
+                "~/Scripts/polyfills/*.js",
+                "~/Scripts/*.js", 
+                "~/Scripts/app/*.js",
+                "~/Scripts/fonts/*.js"
+                );
+            
+            /*
             bundle.Include(
                 "~/Scripts/require.js",
                 "~/Scripts/require.config.js");
+            */
 
             bundles.Add(bundle);
         }

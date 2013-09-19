@@ -253,7 +253,7 @@
           <string>jquery</string>
         </key>
         <value>
-          <boolean>false</boolean>
+          <boolean>true</boolean>
         </value>
       </item>
       <item>
@@ -694,6 +694,7 @@
       <string>define</string>
       <string>require</string>
       <string>requirejs</string>
+      <string>ko</string>
     </PreDefined>
   </JSLintOptions>
   <BuildFileTypes>JS</BuildFileTypes>

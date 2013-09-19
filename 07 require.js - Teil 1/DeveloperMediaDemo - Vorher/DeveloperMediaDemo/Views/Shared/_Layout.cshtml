@@ -10,15 +10,15 @@
 <body>
     
     <div class="page">
-        <div id="header"></div>
+        <div id="header"><small>vorher</small></div>
         <div id="main">
             @RenderBody()
         </div>
     </div>
 
    
-@Scripts.Render(BundleConfig.ScriptsGlobal)
-<script>@RenderSection("scripts", false)</script>
+    @Scripts.Render(BundleConfig.ScriptsGlobal)
+    @RenderSection("scripts", false)
    
 </body>
 </html>

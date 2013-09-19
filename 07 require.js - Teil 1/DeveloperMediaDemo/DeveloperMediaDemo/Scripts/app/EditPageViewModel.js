@@ -1,4 +1,4 @@
-﻿define(['jquery', 'knockout', 'knockout.mapping', 'knockout.validation'], function ($, ko, mapping) {
+﻿define(['jquery', 'knockout', 'knockout.mapping', 'globalEvent', 'knockout.validation'], function ($, ko, mapping, globalEvent) {
 
     var EditPageViewModel = function(id) {
 
@@ -23,11 +23,12 @@
         
         self.loadData = function () {
 
+            globalEvent.trigger('loadData');
+
             $.ajax('/api/note/' + id).done(function (xhr) {
                 self = mapping.fromJS(xhr, {}, self);
-
-                // later we will find a better position!
-                $.refreshPage();
+            }).done(function () {
+                globalEvent.trigger('dataLoaded');
             });
         };
 

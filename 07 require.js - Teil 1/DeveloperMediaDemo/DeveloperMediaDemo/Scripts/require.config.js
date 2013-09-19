@@ -17,5 +17,6 @@
         'polyfills/json2': { exports: 'JSON.stringify' },
         'polyfills/iso8601': { exports: 'Date.parseISO' },
         'fonts/buxtonSketch': { deps: ['polyfills/cufon'], exports: 'Cufon' },
-    }
+    },
+    deps: ['jquery.loadingIndicator']
 });

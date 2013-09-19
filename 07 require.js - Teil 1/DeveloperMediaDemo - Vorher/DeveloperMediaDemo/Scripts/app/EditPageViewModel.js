@@ -1,4 +1,5 @@
-﻿define(['jquery', 'knockout', 'knockout.mapping', 'knockout.validation'], function ($, ko, mapping) {
+﻿//define(['jquery', 'knockout', 'knockout.mapping', 'knockout.validation'], function ($, ko, mapping) {
+var mapping = ko.mapping;
 
     var EditPageViewModel = function(id) {
 
@@ -53,5 +54,5 @@
 
     };
 
-    return EditPageViewModel;
-});
+//    return EditPageViewModel;
+//});

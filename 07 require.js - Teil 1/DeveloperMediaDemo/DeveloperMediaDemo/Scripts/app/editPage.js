@@ -5,9 +5,6 @@
         var model = new EditPageViewModel(id);
         ko.applyBindings(model, $('#edit_template').get(0));
         model.loadData();
-        
-        // later we will find a better position!
-        $.refreshPage();
     };
 
     return {

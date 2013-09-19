@@ -1,4 +1,4 @@
-﻿define(['jquery'], function($) {
+﻿//define(['jquery'], function($) {
 
     var addLoadingIndicator = function($el, options) {
 
@@ -47,6 +47,6 @@
     };
 
     $(function () {
-        $(window.document.body).append('<img src="Content/Images/ajax-loader.gif" style="display:none;" alt="preloaded image" />');
+        $(window.document.body).append('<img src="/Content/Images/ajax-loader.gif" style="display:none;" alt="preloaded image" />');
     });
-});
+//});

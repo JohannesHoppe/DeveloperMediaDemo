@@ -159,9 +159,6 @@
     <Content Include="Content\images\notifications\info.png" />
     <Content Include="Content\images\notifications\success.png" />
     <Content Include="Content\images\notifications\warning.png" />
-    <Content Include="Scripts\app\EditPageViewModel.js" />
-    <Content Include="Scripts\app\editPage.js" />
-    <Content Include="Scripts\app\indexPage.js" />
     <Content Include="Content\01_main.less">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -183,7 +180,10 @@
     <None Include="Scripts\jquery-2.0.3.intellisense.js">
       <DependentUpon>jquery-2.0.3.js</DependentUpon>
     </None>
-    <Content Include="Scripts\domReady.js" />
+    <Content Include="Scripts\app\editPage.js" />
+    <Content Include="Scripts\app\EditPageViewModel.js" />
+    <Content Include="Scripts\fixme.js" />
+    <Content Include="Scripts\globalEvent.js" />
     <Content Include="Scripts\jquery-2.0.3.js" />
     <Content Include="Scripts\jquery-2.0.3.min.js">
       <DependentUpon>jquery-2.0.3.js</DependentUpon>
@@ -226,10 +226,6 @@
     <Content Include="Scripts\polyfills\datejs.js" />
     <Content Include="Scripts\app\IndexPageViewModel.js" />
     <Content Include="Scripts\polyfills\json2.js" />
-    <Content Include="Scripts\require.config.js">
-      <DependentUpon>require.js</DependentUpon>
-    </Content>
-    <Content Include="Scripts\require.js" />
     <Content Include="Views\Home\Edit.cshtml" />
     <Content Include="Scripts\jquery-2.0.3.min.map">
       <DependentUpon>jquery-2.0.3.js</DependentUpon>
@@ -247,8 +243,6 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\polyfills\cufon.js" />
     <Content Include="Scripts\fonts\Buxton_Sketch_400.font.js" />
-    <Content Include="Scripts\fonts\Segoe_Marker_400.font.js" />
-    <Content Include="Scripts\fonts\SketchFlow_Print_400.font.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

@@ -1,4 +1,4 @@
-﻿define(['jquery', 'knockout', 'knockout.mapping'], function ($, ko, mapping) {
+﻿define(['jquery', 'knockout', 'knockout.mapping', 'globalEvent'], function ($, ko, mapping, globalEvent) {
 
     var IndexPageViewModel = function () {
 
@@ -9,11 +9,13 @@
 
         self.loadData = function () {
 
-            $.ajax('/api/note').done(function (xhr) {
+            globalEvent.trigger('loadData');
+
+            $.ajax('/api/note')
+            .done(function (xhr) {
                 self.notes = mapping.fromJS(xhr, {}, self.notes);
-                
-                // later we will find a better position!
-                $.refreshPage();
+            }).done(function() {
+                globalEvent.trigger('dataLoaded');
             });
         };
         

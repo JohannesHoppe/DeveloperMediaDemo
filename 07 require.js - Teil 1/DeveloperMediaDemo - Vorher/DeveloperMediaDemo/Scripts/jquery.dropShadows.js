@@ -1,4 +1,4 @@
-﻿define(['jquery'], function($) {
+﻿//define(['jquery'], function($) {
 
     $.dropShadows = function () {
 
@@ -10,4 +10,4 @@
                 .addClass('processed');
         });
     };
-});
+//});

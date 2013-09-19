@@ -184,6 +184,7 @@
       <DependentUpon>jquery-2.0.3.js</DependentUpon>
     </None>
     <Content Include="Scripts\domReady.js" />
+    <Content Include="Scripts\globalEvent.js" />
     <Content Include="Scripts\jquery-2.0.3.js" />
     <Content Include="Scripts\jquery-2.0.3.min.js">
       <DependentUpon>jquery-2.0.3.js</DependentUpon>
@@ -247,8 +248,6 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\polyfills\cufon.js" />
     <Content Include="Scripts\fonts\Buxton_Sketch_400.font.js" />
-    <Content Include="Scripts\fonts\Segoe_Marker_400.font.js" />
-    <Content Include="Scripts\fonts\SketchFlow_Print_400.font.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
