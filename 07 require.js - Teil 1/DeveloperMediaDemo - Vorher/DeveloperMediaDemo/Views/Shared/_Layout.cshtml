@@ -6,6 +6,9 @@
     <link rel="shortcut icon" href="@Url.Content("~/Content/images/favicon.ico")" />
    
     @BundleConfig.RenderLess(BundleConfig.StylesLess)
+    
+    @Scripts.Render(BundleConfig.ScriptsGlobal)
+    @RenderSection("scripts", false)
 </head>
 <body>
     
@@ -15,10 +18,6 @@
             @RenderBody()
         </div>
     </div>
-
-   
-    @Scripts.Render(BundleConfig.ScriptsGlobal)
-    @RenderSection("scripts", false)
    
 </body>
 </html>
