@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Developer Media - Knockout Demo</title>
+    <link rel="shortcut icon" href="@Url.Content("~/Content/images/favicon.ico")" />
+   
+    @BundleConfig.RenderLess(BundleConfig.StylesLess)
+</head>
+<body>
+        
+    <div class="page">
+        <div id="header"><small>nachher</small></div>
+        <div id="main">
+            @RenderBody()
+        </div>
+    </div>
+
+@Scripts.Render(BundleConfig.ScriptsGlobal)
+@RenderSection("scripts", false)
+
+  
+</body>
+</html>
