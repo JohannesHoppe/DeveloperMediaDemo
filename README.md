@@ -46,7 +46,7 @@
 >12.09.2013  
 >1. [Live Webinar](http://developer-media.de/portfolioentry/jquery-2013-teil-1/)  
 >2. [Präsentation auf Github](http://johanneshoppe.github.io/DeveloperMediaSlides/index_jQuery.html)  
->3. [Dokumentation auf Github](https://github.com/JohannesHoppe/DeveloperMediaDemo/blob/master/Documentation/05.%20jQuery%20Webinar.md) / [PDF](https://github.com/JohannesHoppe/DeveloperMediaDemo/blob/master/Documentation/05.%20jQuery%20Webinar.pdf)  
+>3. [Dokumentation auf Github](https://github.com/JohannesHoppe/DeveloperMediaDemo/blob/master/Documentation/05.%20jQuery%20Webinar.md) / [PDF](https://github.com/JohannesHoppe/DeveloperMediaDemo/raw/master/Documentation/05.%20jQuery%20Webinar.pdf)  
 >4. __[Download Demo-Code und Dokumentation (.zip)](http://dl.bintray.com/johanneshoppe/DeveloperMediaDemo/DeveloperMediaWebinar_jQuery_Teil1.zip?direct)__  
 
 ### 06. jQuery 2013 - Teil 2
@@ -55,7 +55,12 @@
 
 ### 07. Require.js & Prinzipien für modulares JavaScript - Teil 1
 
->19.09.2013
+>19.09.2013  
+>1. [Live Webinar](http://developer-media.de/portfolioentry/require-js-prinzipien-fur-modulares-javascript/)  
+>2. [Präsentation auf Github](http://johanneshoppe.github.io/DeveloperMediaSlides/index_require.js.html)  
+>3. [Dokumentation auf Github](https://github.com/JohannesHoppe/DeveloperMediaDemo/blob/master/Documentation/07.%20require.js%20Webinar.md) / [PDF](https://github.com/JohannesHoppe/DeveloperMediaDemo/raw/master/Documentation/07.%20require.js%20Webinar.pdf)  
+>4. __[Download Demo-Code und Dokumentation (.zip)](http://dl.bintray.com/johanneshoppe/DeveloperMediaDemo/DeveloperMediaWebinar_RequireJS_Teil1.zip?direct)__  
+
 
 ### 08. Require.js & Prinzipien für modulares JavaScript - Teil 2
 
