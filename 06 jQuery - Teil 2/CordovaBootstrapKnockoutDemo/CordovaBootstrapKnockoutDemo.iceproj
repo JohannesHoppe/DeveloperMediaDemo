@@ -71,6 +71,8 @@
     <Content Include="css\bootstrap.min.css">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="css\bootswatch.slate.css" />
+    <Content Include="css\bootswatch.slate.min.css" />
     <Content Include="css\page.css" />
     <Content Include="fonts\glyphicons-halflings-regular.eot">
       <SubType>Content</SubType>
@@ -116,6 +118,9 @@
     <Content Include="js\knockout-2.3.0.js" />
     <Content Include="js\knockout.mapping-latest.debug.js" />
     <Content Include="js\knockout.mapping-latest.js" />
+    <Content Include="js\moment.min.js">
+      <SubType>Content</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Resources\" />

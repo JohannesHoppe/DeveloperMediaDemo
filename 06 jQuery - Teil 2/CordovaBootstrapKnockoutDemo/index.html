@@ -4,8 +4,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
+        <link href="css/bootswatch.slate.min.css" rel="stylesheet" media="screen">
         <link href="css/page.css" rel="stylesheet" media="screen">
         
         <title>Demo: Cordova - Bootstrap - Knockout</title>
@@ -13,16 +14,47 @@
     <body>
         <div id="index_template" class="container">
             
-            <h2 class="glyphicon glyphicon-home">Bootstrap-Ko</h2>
+            <div data-bind="visible: !selectedNote()" style="display:none;">
+                  
+                <i class="glyphicon glyphicon-home" data-bind="click: $root.loadData"></i>
+                <h2>Bootstrap-Ko</h2>
             
-            <p>The following list was rendered with Knockout and styled via the default boostrap theme.</p> 
+                <p class="alert alert-info">
+                    The following list was rendered with Knockout and styled via the default boostrap theme.
+                </p> 
             
-            <div class="list-group" data-bind="foreach: notes">
-                <a class="list-group-item"  data-bind="text: Title">
-                    <span class="badge">1</span>
-                    Loading...
-                </a>
-            </div> 
+                <div class="list-group" data-bind="foreach: notes">
+                    <a class="list-group-item" data-bind="click: $root.showDetails">
+                        <span class="badge" data-bind="text: moment(Added()).format('DD.MM.YYYY')"></span>
+                        <!--ko text: Title--><!--/ko-->
+                    </a>
+                </div> 
+            </div>    
+                       
+            <div data-bind="visible: selectedNote()" style="display:none;">
+                
+                <form class="form-horizontal" role="form" data-bind="with: selectedNote">
+                    
+                    <i class="glyphicon glyphicon-circle-arrow-left" data-bind="click: $root.showHome"></i>
+                    <h2>Details
+                        <span class="label label-info pull-right small" data-bind="text: moment(Added()).format('DD.MM.YYYY')"></span>
+                    </h2> 
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Title</label>
+                        <div class="col-lg-10">
+                            <p class="form-control-static" data-bind="text: Title"></p>
+                        </div> 
+                    </div>  
+                
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Message</label>
+                        <div class="col-lg-10">
+                            <p class="form-control-static" data-bind="text: Message"></p>
+                        </div> 
+                    </div>
+                </form>
+            </div>           
         </div>
         
         <script type="text/javascript" src="cordova.js"></script> 
@@ -30,6 +62,7 @@
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/knockout-2.3.0.js"></script>
         <script type="text/javascript" src="js/knockout.mapping-latest.js"></script>
+        <script type="text/javascript" src="js/moment.min.js"></script>
         <script type="text/javascript" src="js/IndexPageViewModel.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">

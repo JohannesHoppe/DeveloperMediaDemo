@@ -5,9 +5,11 @@
         var self = this;
 
         self.notes = ko.observableArray();
+        self.selectedNote = ko.observable(false);
 
         self.loadData = function () {
 
+            self.notes.removeAll();
             $.ajax({
                 url: 'http://johanneshoppe.github.io/DeveloperMediaSlides/examples/webinarp.json',
                 dataType: 'jsonp',
@@ -17,8 +19,12 @@
             });
         };
 
-        self.goToDetails = function () {
-            document.location.href = "/Home/Edit/" + this.Id();
+        self.showDetails = function (current) {
+            self.selectedNote(current);
+        };
+
+        self.showHome = function() {
+            self.selectedNote(false);
         };
     };
 
