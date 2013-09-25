@@ -21,7 +21,7 @@
 
             var listItemWithLink = $('<li />').append(
                 $('<a />')
-                    .attr('href', '#page-ui-interaction')
+                    .attr('href', '#page-details')
                     .data('transition', 'slide')
                     .text(item.Title)
                     .click(function() {
@@ -33,8 +33,5 @@
         });
         return items;
     };
-
-
-    //$(document).on("deviceready", init);
 
 })(window.jQuery);
