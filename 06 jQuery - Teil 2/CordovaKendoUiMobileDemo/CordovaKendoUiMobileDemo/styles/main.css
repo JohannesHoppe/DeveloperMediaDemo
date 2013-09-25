@@ -1,0 +1,22 @@
+body, html {
+    margin:0;   
+    height:100%;
+    width:100%;
+}
+
+/* COMMON STYLES*/
+.view-content h1{
+    color:#42454a;
+    font-size:1.8em;
+}
+.view-content h1.welcome{
+    text-align:center;
+}
+.view-content h3{
+    color:#42454a;
+    font-size:1.1em;
+}
+.view-content p{
+    color:#4a4e54;
+    font-size:1em;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+        <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+        <link href="styles/main.css" rel="stylesheet" />
+
+        <script src="cordova.js"></script>
+        <script src="kendo/js/jquery.min.js"></script>
+        <script src="kendo/js/kendo.mobile.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+
+        <script src="scripts/login.js"></script>
+        <script src="scripts/location.js"></script>
+        <script src="scripts/weather.js"></script>
+        <script src="scripts/app.js"></script>
+
+    </head>
+    <body>
+        <!--Home-->
+        <div id="tabstrip-home" data-role="view" data-title="Home">
+
+            <div data-role="content" class="view-content">
+                <h1>Kendo UI Mobile</h1>
+                <p>
+                    The following list was rendered with <b>jQuery</b> &amp; <b>Knockout</b>
+                    and styled via the Slate <b>Bootstrap</b> theme.
+                </p>
+
+            </div>
+        </div>
+
+        <!-- General Layout -->
+        <div data-role="layout" data-id="tabstrip-layout" >
+
+            <div data-role="header">
+                <div data-role="navbar">
+                    <span data-role="view-title"></span>
+                </div>
+            </div>
+
+            <div data-role="footer">
+                <div data-role="tabstrip">
+                    <a href="#tabstrip-home" data-icon="home">Home</a>
+                    <a href="#tabstrip-login" data-icon="contacts">Details</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+        
