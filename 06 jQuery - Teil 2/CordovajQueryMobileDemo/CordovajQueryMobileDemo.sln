@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}") = "CordovajQueryMobile", "CordovajQueryMobile\CordovajQueryMobile.iceproj", "{0F86ECF9-327A-4FF7-87A5-0B5E47F5CB4C}"
+Project("{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}") = "CordovajQueryMobileDemo", "CordovajQueryMobile\CordovajQueryMobileDemo.iceproj", "{0F86ECF9-327A-4FF7-87A5-0B5E47F5CB4C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{270873E1-6C1E-4C11-A441-51CC3FA6A13A}"
 	ProjectSection(SolutionItems) = preProject
