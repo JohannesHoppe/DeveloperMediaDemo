@@ -16,6 +16,7 @@
                 jsonpCallback: 'callback'
             }).done(function(xhr) {
                 self.notes = ko.mapping.fromJS(xhr, {}, self.notes);
+                self.notes.reverse();
             });
         };
 
