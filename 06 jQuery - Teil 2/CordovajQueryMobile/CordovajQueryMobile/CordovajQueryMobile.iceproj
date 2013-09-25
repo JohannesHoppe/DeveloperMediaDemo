@@ -68,15 +68,8 @@
     <Content Include="jquery-mobile\styles\images\icons-36-black.png" />
     <Content Include="jquery-mobile\styles\images\icons-36-white.png" />
     <Content Include="jquery-mobile\styles\jquery.mobile-1.3.1.min.css" />
+    <Content Include="scripts\index.js" />
     <Content Include="scripts\login.js" />
-    <Content Include="styles\images\location.png" />
-    <Content Include="styles\images\location2x.png" />
-    <Content Include="styles\images\location_active.png" />
-    <Content Include="styles\images\location_active2x.png" />
-    <Content Include="styles\images\search.png" />
-    <Content Include="styles\images\search2x.png" />
-    <Content Include="styles\images\search_active.png" />
-    <Content Include="styles\images\search_active2x.png" />
     <Content Include="styles\main.css" />
     <Content Include="cordova.ios.js">
       <Platform>iOS</Platform>
@@ -102,7 +95,6 @@
     <Folder Include="Plugins\" />
     <Folder Include="scripts\" />
     <Folder Include="styles\" />
-    <Folder Include="styles\images\" />
   </ItemGroup>
   <Import Project="$(IceniumTargets)Build.targets" />
   <!--

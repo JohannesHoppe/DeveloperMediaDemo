@@ -1,3 +1,8 @@
+h1 {
+    margin: 0;
+}
+
+
 .ui-footer {
     text-align: center; 
     padding:0.3em;
@@ -16,27 +21,3 @@
 }
 
 
-
-/* RETINA DISPLAY STYLES*/
-@media only screen and (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
-    #map-search {
-        background-image:url(../styles/images/search2x.png);
-        background-repeat:no-repeat;
-        background-size:100%;
-    }
-    #map-search:active {
-        background-image:url(../styles/images/search_active2x.png);
-        background-repeat:no-repeat;
-        background-size:100%;
-    }
-    #map-navigate-home {
-        background-image:url(../styles/images/location2x.png);
-        background-repeat:no-repeat;
-        background-size:100%;
-    }
-    #map-navigate-home:active {
-        background-image:url(../styles/images/location_active2x.png);
-        background-repeat:no-repeat;
-        background-size:100%;
-    }
-}
