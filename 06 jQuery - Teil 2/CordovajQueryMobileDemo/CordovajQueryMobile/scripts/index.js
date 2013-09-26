@@ -6,10 +6,10 @@
             url: 'http://johanneshoppe.github.io/DeveloperMediaSlides/examples/webinarp.json',
             dataType: 'jsonp',
             jsonpCallback: 'callback'
-        }).done(function (xhr) {
+        }).done(function (result) {
             $('#home-listview')
                 .empty()
-                .append(createListItems(xhr))
+                .append(createListItems(result))
                 .listview('refresh');
         });
     });

@@ -14,8 +14,8 @@
                 url: 'http://johanneshoppe.github.io/DeveloperMediaSlides/examples/webinarp.json',
                 dataType: 'jsonp',
                 jsonpCallback: 'callback'
-            }).done(function(xhr) {
-                self.notes = ko.mapping.fromJS(xhr, {}, self.notes);
+            }).done(function(result) {
+                self.notes = ko.mapping.fromJS(result, {}, self.notes);
             });
         };
 

@@ -1,35 +1,74 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
         <meta charset="utf-8" />
         <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
         <link href="styles/main.css" rel="stylesheet" />
-
+                                     
         <script src="cordova.js"></script>
         <script src="kendo/js/jquery.min.js"></script>
         <script src="kendo/js/kendo.mobile.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+        <script src="scripts/DetailsPageViewModel.js"></script>
+        <script src="scripts/moment.min.js"></script>
+        <script src="scripts/IndexPageViewModel.js"></script>
+        <script src="scripts/app.js"></script>        
 
-        <script src="scripts/login.js"></script>
-        <script src="scripts/location.js"></script>
-        <script src="scripts/weather.js"></script>
-        <script src="scripts/app.js"></script>
-
+        <title>Demo: Kendo UI Mobile</title>
     </head>
     <body>
-        <!--Home-->
-        <div id="tabstrip-home" data-role="view" data-title="Home">
+
+        <div id="indexPage" data-role="view" data-title="Home" data-model="app.indexPageViewModel">
 
             <div data-role="content" class="view-content">
+                
+                <i class="km-icon km-home"></i>
                 <h1>Kendo UI Mobile</h1>
                 <p>
-                    The following list was rendered with <b>jQuery</b> &amp; <b>Knockout</b>
-                    and styled via the Slate <b>Bootstrap</b> theme.
-                </p>
+                    The following list was rendered with <b>Kendo UI Mobile</b>,
+                    a MVVM framework on top of <b>jQuery</b>.
+                </p>         
+                            
+                <ul data-role="listview"
+                    data-template="notesTemplate"
+                    data-style="inset"
+                    data-bind="source: notes, events: { click: showDetails }">
+                </ul>   
 
             </div>
-        </div>
+        </div>   
+        
+        <script id="notesTemplate" type="text/x-kendo-template">
+            <a>#=Title#</a>
+        </script>
+                  
+        <div id="detailsPage" data-role="view" data-title="Details" data-model="app.detailsPageViewModel">
+
+            <div data-role="content" class="view-content" data-style="inset" >
+                
+                <span data-bind="text: Added" class="label"></span>
+                <i class="km-icon km-bookmarks"></i>
+                <h1>Webinar</h1>
+                
+                <ul data-role="listview" data-style="inset" data-type="group">
+                    <li>
+                        <ul>
+                            <li><b data-bind="text: Title"></b></li>
+                            <li>Johannes Hoppe</li>
+                        </ul>
+                    </li>
+                    <li>Message
+                        <ul>
+                            <li data-bind="text: Message"></li>
+                        </ul>
+                    </li>                    
+                </ul>
+
+                <!--
+                <a href="#indexPage" data-role="button" data-transition="slide:left reverse">Back to Home</a>
+                -->
+            </div>
+        </div>           
+        
 
         <!-- General Layout -->
         <div data-role="layout" data-id="tabstrip-layout" >
@@ -37,16 +76,19 @@
             <div data-role="header">
                 <div data-role="navbar">
                     <span data-role="view-title"></span>
+                    <a class="nav-button" data-align="left" data-role="backbutton">Back</a>
                 </div>
             </div>
 
             <div data-role="footer">
                 <div data-role="tabstrip">
-                    <a href="#tabstrip-home" data-icon="home">Home</a>
-                    <a href="#tabstrip-login" data-icon="contacts">Details</a>
+                    <a href="#indexPage" data-icon="home">Home</a>
+                    <a href="#detailsPage" data-icon="contacts">Details</a>
                 </div>
             </div>
         </div>
+                  
+   
     </body>
 </html>
         
