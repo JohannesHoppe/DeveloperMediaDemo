@@ -1,0 +1,43 @@
+h1 {
+    margin: 0;
+}
+
+.ui-footer {
+    text-align: center; 
+    padding:0.3em;
+}
+.ui-footer > .footerText {
+    font-size:0.8em;
+    position:relative;
+    top:-2px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.ui-grid-a .ui-block-a.side { width: 35%; }
+.ui-grid-a .ui-block-b.main { width: 65%; }
+
+
+.label {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    display: block;
+    padding: .25em .6em;
+    font-size: 19px;
+    font-weight: 200;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #7a8288;
+    border-radius: .25em;
+    float: right;
+    margin-top: 7px;
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#5f9cc5),color-stop(1,#396b9e));
+}
+
+#page-details .ui-content h1 {
+    margin-bottom: 10px;
+}

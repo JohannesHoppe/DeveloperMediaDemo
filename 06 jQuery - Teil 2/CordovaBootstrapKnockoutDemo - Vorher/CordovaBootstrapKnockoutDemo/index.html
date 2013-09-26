@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="css/bootswatch.slate.min.css" rel="stylesheet" media="screen">
+        <link href="css/page.css" rel="stylesheet" media="screen">
+        
+        <title>Demo: Cordova - Bootstrap - Knockout</title>
+    </head>
+    <body>
+        <div id="index_template" class="container">
+            
+            <div>
+                <h2>Bootstrap-Ko</h2>
+            
+                <p class="alert alert-info">
+                    The following list was rendered with <b>jQuery</b> &amp; <b>Knockout</b>
+                    and styled via the Slate <b>Bootstrap</b> theme.
+                </p> 
+            
+                <div class="list-group">
+                    <a class="list-group-item">
+                        <span class="badge">Datum</span>
+                        Title
+                    </a>
+                </div> 
+            </div>    
+        </div>
+        
+        <script type="text/javascript" src="cordova.js"></script> 
+        <script type="text/javascript" src="js/jquery-2.0.3.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/knockout-2.3.0.js"></script>
+        <script type="text/javascript" src="js/knockout.mapping-latest.js"></script>
+        <script type="text/javascript" src="js/moment.min.js"></script>
+        <script type="text/javascript" src="js/IndexPageViewModel.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.init();
+        </script>
+    </body>
+</html>

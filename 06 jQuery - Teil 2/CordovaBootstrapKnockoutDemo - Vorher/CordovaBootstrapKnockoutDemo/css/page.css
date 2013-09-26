@@ -1,0 +1,20 @@
+﻿i.glyphicon {
+
+    display: block;
+    float: left;
+    font-size: 30px;
+    margin-top: -5px;
+    margin-right: 10px;
+}
+
+i.glyphicon:hover {
+    color: #5bc0de;
+}
+
+a.list-group-item {
+    color: #c8c8c8;
+}
+
+.label {
+    font-size: 60%;
+}
