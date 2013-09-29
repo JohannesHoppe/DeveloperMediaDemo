@@ -52,6 +52,10 @@
 ### 06. jQuery 2013 - Teil 2
 
 >26.09.2013
+>1. [Live Webinar](http://developer-media.de/portfolioentry/jquery-2013-teil-2/)  
+>2. [Präsentation auf Github](http://johanneshoppe.github.io/DeveloperMediaSlides/index_jQuery.html)  
+>3. [Dokumentation auf Github](https://github.com/JohannesHoppe/DeveloperMediaDemo/blob/master/Documentation/06.%20jQuery%20Webinar.md) / [PDF](https://github.com/JohannesHoppe/DeveloperMediaDemo/raw/master/Documentation/06.%20jQuery%20Webinar.pdf)  
+>4. __[Download Demo-Code und Dokumentation (.zip)](http://dl.bintray.com/johanneshoppe/DeveloperMediaDemo/DeveloperMediaWebinar_jQuery_Teil2.zip?direct)__  
 
 ### 07. Require.js & Prinzipien für modulares JavaScript - Teil 1
 
