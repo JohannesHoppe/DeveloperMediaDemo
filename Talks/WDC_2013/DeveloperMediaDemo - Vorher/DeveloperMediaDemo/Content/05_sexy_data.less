@@ -1,0 +1,67 @@
+﻿/* Sexy date
+----------------------------------------------------------*/
+
+.rotate_it
+{
+
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=-2); /* IE */
+  -moz-transform: rotate(-5deg);  /* Mozilla Firefox */
+  -webkit-transform: rotate(-5deg); /* Google Chrome and Safari */
+  -o-transform: rotate(-5deg); /* old Opera */
+  transform: rotate(-5deg); /* CSS3, new Opera */
+}
+
+.rotate_it_right 
+{
+
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2); /* IE */
+  -moz-transform: rotate(5deg);  /* Mozilla Firefox */
+  -webkit-transform: rotate(5deg); /* Google Chrome and Safari */
+  -o-transform: rotate(5deg); /* old Opera */
+  transform: rotate(5deg); /* CSS3, new Opera */
+   
+}
+
+.sexy_date
+{
+    background-color: #E0E2BB;
+
+    float:right;
+    margin: 2px;
+    margin-left:10px;
+    padding:45px 5px 0;
+    position:relative;
+}
+
+.sexy_date .day
+{
+  font-size: 40px;
+  left:3px;
+  line-height:39px;
+  position:absolute;
+  top: 0;
+}
+
+.sexy_date .month
+{
+    font-size:25px;
+    text-transform:uppercase;
+    padding-right: 20px;
+    line-height:20px;
+}
+.sexy_date .year 
+{
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+
+
+    display: block;
+    font-size: 1em;
+    background-color: #E0E2BB;
+    position: absolute;
+    right: 0;
+    top: 15px;
+}

@@ -1,0 +1,74 @@
+﻿/* shadow effect that uses the Sliding doors technique
+----------------------------------------------------------*/
+
+.drop_shadow
+{
+    background: url(images/drop_shadow/top_left.png) top left no-repeat;
+    padding: 0 !important;
+}
+
+.drop_shadow2
+{
+    background: url(images/drop_shadow/bottom_left.png) bottom left no-repeat;
+}
+
+.drop_shadow3
+{
+    background: url(images/drop_shadow/top_right.png) top right no-repeat;
+}
+
+.drop_shadow4
+{
+    background: url(images/drop_shadow/bottom_right.png) bottom right no-repeat;
+    padding-bottom: 15px;
+}
+
+.drop_shadow5 
+{
+    background: #f8f8f8 none;
+    padding: 10px;
+    margin: 0 15px 0 15px;
+}
+
+/* Sticky Notes */
+
+.postit,
+.bigpostit
+{
+    width: 360px;
+    margin: 30px 0 0 20px;
+    float: left;  
+    font: 14px "Lucida Grande", "Lucida Sans Unicode" ,Arial,Verdana,sans-serif;
+}
+
+.bigpostit 
+{
+    width: 600px;
+    float: none;
+    margin: 30px auto;
+}
+
+.postit .drop_shadow5,
+.bigpostit .drop_shadow5
+{
+  background: #F0F0A6 none;
+  min-height: 80px;
+}
+
+.postit.redColor .drop_shadow5,
+.bigpostit.redColor .drop_shadow5
+{
+  background: #EFA4B2 none;
+}
+
+.postit.greenColor .drop_shadow5,
+.bigpostit.greenColor .drop_shadow5
+{
+  background: #BBDFB5 none;
+}
+
+.postit.grayColor .drop_shadow5,
+.bigpostit.grayColor .drop_shadow5
+{
+  background: #DFDFDF none;
+}
