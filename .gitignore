@@ -1,5 +1,5 @@
-**/DeveloperMediaDemo/**/obj
-**/DeveloperMediaDemo/**/bin
+obj/
+bin/
 packages/
 *.user
 *.suo
