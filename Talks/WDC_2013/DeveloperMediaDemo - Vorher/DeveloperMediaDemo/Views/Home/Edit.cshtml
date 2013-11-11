@@ -1,13 +1,11 @@
 ﻿@section scripts  {
-<script>
-    
-    var id = @ViewBag.Id;
+<script>    
+    var id = '@ViewBag.Id';
 
     require(['app/editPage'], function(i) { 
         i.init(id); 
     });
-
-</script>          
+</script>
 }
 
 <div id="edit_template">
